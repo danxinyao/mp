@@ -1,0 +1,316 @@
+
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>系统信息</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+
+<link href="templates/default/css/base.css" tppabs="http://meipin365.cn/mall/templates/default/css/base.css" rel="stylesheet" type="text/css">
+<link href="templates/default/css/home_header.css" tppabs="http://meipin365.cn/mall/templates/default/css/home_header.css" rel="stylesheet" type="text/css">
+<link href="resource/font/font-awesome/css/font-awesome.min.css" tppabs="http://meipin365.cn/mall/resource/font/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<!--[if IE 7]>
+  <link rel="stylesheet" href="resource/font/font-awesome/css/font-awesome-ie7.min.css" tppabs="http://meipin365.cn/mall/resource/font/font-awesome/css/font-awesome-ie7.min.css">
+<![endif]-->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="../data/resource/js/html5shiv.js" tppabs="http://meipin365.cn/data/resource/js/html5shiv.js"></script>
+      <script src="../data/resource/js/respond.min.js" tppabs="http://meipin365.cn/data/resource/js/respond.min.js"></script>
+<![endif]-->
+<style type="text/css">
+body, .header-wrap { background-color: #FAFAFA;}
+.wrapper { width: 1000px;}
+#faq { display: none;}
+.msg { font: 100 36px/48px arial,"microsoft yahei"; color: #555; background-color: #FFF; text-align: center; width: 100%; border: solid 1px #E6E6E6; margin-bottom: 10px; padding: 120px 0;}
+.msg i { font-size: 48px; vertical-align: middle; margin-right: 10px;}
+</style>
+<script>var COOKIE_PRE = '775A_';var _CHARSET = 'utf-8';var SITEURL = 'http://meipin365.cn/mall/';var MEMBER_SITE_URL = 'http://meipin365.cn/member/';var SHOP_RESOURCE_SITE_URL = 'http://meipin365.cn/mall/resource';var RESOURCE_SITE_URL = 'http://meipin365.cn/data/resource';var SHOP_TEMPLATES_URL = 'http://meipin365.cn/mall/templates/default/';</script>
+<script type="text/javascript" src="../data/resource/js/jquery.js" tppabs="http://meipin365.cn/data/resource/js/jquery.js"></script>
+<script type="text/javascript" src="../data/resource/js/common.js" tppabs="http://meipin365.cn/data/resource/js/common.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#details").children('ul').children('li').click(function(){
+		$(this).parent().children('li').removeClass("current");
+		$(this).addClass("current");
+		$('#search_act').attr("value",$(this).attr("act"));
+	});
+	var search_act = $("#details").find("li[class='current']").attr("act");
+	$('#search_act').attr("value",search_act);
+	$("#keyword").blur();
+});
+</script>
+</head>
+<body>
+
+<!--By美品商城-->
+
+<div id="append_parent"></div>
+
+<div id="ajaxwaitid"></div>
+
+
+
+<div class="public-top-layout w">
+
+  <div class="topbar wrapper">
+
+    <div class="user-entry">
+
+      
+      您好，欢迎来到 <a href="javascript:if(confirm(%27http://meipin365.cn/mall/  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/%27" tppabs="http://meipin365.cn/mall" title="首页" alt="首页">美品商城</a>
+      <span class="other">
+
+      
+      
+         
+      </span>
+
+       
+
+      <span>[<a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=index  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=index%27" tppabs="http://meipin365.cn/member/index.php?act=login&op=index">登录</a>]</span> <span>[<a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=register  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=register%27" tppabs="http://meipin365.cn/member/index.php?act=login&op=register">注册</a>]</span>
+<!-- http://meipin365.cn/member/index.php?act=login&op=register&spreaderid=1475  -->
+      
+    </div>
+
+    <div class="quick-menu">
+
+	
+	<dl>
+
+        <dt><em class="ico_shop"></em><a href="index.php-act=show_joinin&op=index.htm" tppabs="http://meipin365.cn/mall/index.php?act=show_joinin&op=index" title="商家管理">商家管理</a><i></i></dt>
+
+        <dd>
+
+          <ul>
+
+            <li><a href="index.php-act=show_joinin&op=index.htm" tppabs="http://meipin365.cn/mall/index.php?act=show_joinin&op=index" title="招商入驻">招商入驻</a></li>
+
+            <li><a href="index.php-act=seller_login&op=show_login.htm" tppabs="http://meipin365.cn/mall/index.php?act=seller_login&op=show_login" target="_blank" title="登录商家管理中心">商家登录</a></li>
+
+          </ul>
+
+        </dd>
+
+      </dl>
+
+      <dl>
+
+        <dt><em class="ico_order"></em><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order%27" tppabs="http://meipin365.cn/mall/index.php?act=member_order">我的订单</a><i></i></dt>
+
+        <dd>
+
+          <ul>
+
+            <li><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order%26state_type%3Dstate_new  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order%26state_type%3Dstate_new%27" tppabs="http://meipin365.cn/mall/index.php?act=member_order&state_type=state_new">待付款订单</a></li>
+
+            <li><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order%26state_type%3Dstate_send  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order%26state_type%3Dstate_send%27" tppabs="http://meipin365.cn/mall/index.php?act=member_order&state_type=state_send">待确认收货</a></li>
+
+            <li><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order%26state_type%3Dstate_noeval  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order%26state_type%3Dstate_noeval%27" tppabs="http://meipin365.cn/mall/index.php?act=member_order&state_type=state_noeval">待评价交易</a></li>
+
+          </ul>
+
+        </dd>
+
+      </dl>
+
+      <dl>
+
+        <dt><em class="ico_store"></em><a href="index.php-act=member_favorite_goods&op=fglist.htm" tppabs="http://meipin365.cn/mall/index.php?act=member_favorite_goods&op=fglist">我的收藏</a><i></i></dt>
+
+        <dd>
+
+          <ul>
+
+            <li><a href="index.php-act=member_favorite_goods&op=fglist.htm" tppabs="http://meipin365.cn/mall/index.php?act=member_favorite_goods&op=fglist">商品收藏</a></li>
+
+            <li><a href="index.php-act=member_favorite_store&op=fslist.htm" tppabs="http://meipin365.cn/mall/index.php?act=member_favorite_store&op=fslist">店铺收藏</a></li>
+
+          </ul>
+
+        </dd>
+
+      </dl>
+
+      <dl>
+
+        <dt><em class="ico_service"></em>客户服务<i></i></dt>
+
+        <dd>
+
+          <ul>
+
+            <li><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=2  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=2%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=article&ac_id=2">帮助中心</a></li>
+
+            <li><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=5  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=5%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=article&ac_id=5">售后服务</a></li>
+
+            <li><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=6  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=6%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=article&ac_id=6">客服中心</a></li>
+
+          </ul>
+
+        </dd>
+
+      </dl>
+
+      
+      
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="header-wrap"><header class="public-head-layout wrapper">
+  <h1 class="site-logo"><a href="javascript:if(confirm(%27http://meipin365.cn/mall/  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/%27" tppabs="http://meipin365.cn/mall"><img src="../../img.meipin365.cn/data/upload/mall/common/05140446097951879.png" tppabs="http://img.meipin365.cn/data/upload/mall/common/05140446097951879.png" class="pngFix"></a></h1></header></div>
+<div class="msg">
+      
+      <i class="icon-info-sign" style="color: #39C;"></i>
+        
+        专题不存在
+</div>
+<script type="text/javascript">
+
+	window.setTimeout("javascript:location.href='../index.htm'/*tpa=http://meipin365.cn/*/", 2000);
+
+</script>
+<link href="/qqkf/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/qqkf/js/lrtk.js"></script>
+
+                        <!-- 代码 开始 -->
+<div class="main-im">
+    <div id="open_im" class="open-im">&nbsp;</div>
+    <div class="im_main" id="im_main">
+        <div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>
+        <a href="javascript:if(confirm(%27http://wpa.qq.com/msgrd?v=3&uin=2838346245&site=qq&menu=yes  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://wpa.qq.com/msgrd?v=3&uin=2838346245&site=qq&menu=yes%27" tppabs="http://wpa.qq.com/msgrd?v=3&uin=2838346245&site=qq&menu=yes" target="_blank" class="im-qq qq-a" title="在线QQ客服">
+            <div class="qq-container"></div>
+            <div class="qq-hover-c"><img class="img-qq" src="/qqkf/images/qq.png"></div>
+            <span> QQ在线咨询</span>
+        </a>
+        <div class="im-tel">
+            <div>咨询热线</div>
+            <div class="tel-num">400-612-3315</div>
+        </div>
+        <div class="im-footer" style="position:relative">
+            <div class="weixing-container">
+                <div class="weixing-show">
+                    <div class="weixing-txt">微信扫一扫<br>关注美品商城</div>
+                    <img class="weixing-ma" src="/qqkf/images/meipinshop_winxin.jpg">
+                    <div class="weixing-sanjiao"></div>
+                    <div class="weixing-sanjiao-big"></div>
+                </div>
+            </div>
+            <div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+</div>
+<!-- 代码 结束 -->
+
+
+
+<script language="javascript">
+
+    function fade() {
+
+        $("img[rel='lazy']").each(function () {
+
+            var $scroTop = $(this).offset();
+
+            if ($scroTop.top <= $(window).scrollTop() + $(window).height()) {
+
+                $(this).hide();
+
+                $(this).attr("src", $(this).attr("shopwwi-url"));
+
+                $(this).removeAttr("rel");
+
+                $(this).removeAttr("name");
+
+                $(this).fadeIn(500);
+
+            }
+
+        });
+
+    }
+
+
+
+    if ($("img[rel='lazy']").length > 0) {
+
+        $(window).scroll(function () {
+
+            fade();
+
+        });
+
+    }
+
+    ;
+
+    fade();
+
+</script>
+<div class="wwi-footer"><div id="cti" class="wrapper"><ul><li> <span class="icon"> <img style="width: 60px;" src="../../img.meipin365.cn/data/upload/mall/contracticon/7day_60.gif" tppabs="http://img.meipin365.cn/data/upload/mall/contracticon/7day_60.gif" /> </span> <span class="name"> 7天退货 </span> </li><li> <span class="icon"> <img style="width: 60px;" src="../../img.meipin365.cn/data/upload/mall/contracticon/pz_60.gif" tppabs="http://img.meipin365.cn/data/upload/mall/contracticon/pz_60.gif" /> </span> <span class="name"> 品质承诺 </span> </li><li> <span class="icon"> <img style="width: 60px;" src="../../img.meipin365.cn/data/upload/mall/contracticon/psbf_60.gif" tppabs="http://img.meipin365.cn/data/upload/mall/contracticon/psbf_60.gif" /> </span> <span class="name"> 破损补寄 </span> </li><li> <span class="icon"> <img style="width: 60px;" src="../../img.meipin365.cn/data/upload/mall/contracticon/jswl_60.gif" tppabs="http://img.meipin365.cn/data/upload/mall/contracticon/jswl_60.gif" /> </span> <span class="name"> 急速物流 </span> </li><li class="rf">客服电话：<em class="red">400-612-3315</em>  <em class="rgb9">08:30-17:30(周一至周六) QQ客服7X24小时</em></li></ul></div><div id="faq"><div class="wrapper"><ul><li><dl class="s1"><dt>新手指南</dt><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=6  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=6%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=6" title="会员注册"> 会员注册 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=7  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=7%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=7" title="购物流程"> 购物流程 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=8  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=8%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=8" title="订单查询"> 订单查询 </a></dd></dl></li><li><dl class="s2"><dt>支付方式</dt><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=17  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=17%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=17" title="在线支付"> 在线支付 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=28  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=28%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=28" title="平台支付"> 平台支付 </a></dd></dl></li><li><dl class="s3"><dt>配送方式</dt><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=45  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=45%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=45" title="包邮政策"> 包邮政策 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=44  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=44%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=44" title="配送时效"> 配送时效 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=43  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=43%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=43" title="物流查询"> 物流查询 </a></dd></dl></li><li><dl class="s4"><dt>售后服务</dt><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=31  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=31%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=31" title="物流及售后政策"> 物流及售后政策 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=32  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=32%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=32" title="退换货流程"> 退换货流程 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=34  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=34%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=34" title="上门安装"> 上门安装 </a></dd></dl></li><li><dl class="s5"><dt>常见问题</dt><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=9  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=9%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=9" title="发票制度"> 发票制度 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=21  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=21%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=21" title="取消订单"> 取消订单 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=20  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=20%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=20" title="联系商家"> 联系商家 </a></dd></dl></li><li><dl class="s6"><dt>关于我们</dt><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=22  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=22%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=22" title="了解我们"> 了解我们 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=25  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=25%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=25" title="合作洽谈"> 合作洽谈 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=24  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=24%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=24" title="招聘英才"> 招聘英才 </a></dd></dl></li><li class="cooperation"><dl><dt>商家合作</dt><dd><p>错过天猫？别再错过我们！</p><p>美品商城开启全新旅程！</p><a href="index.php-act=show_joinin&op=index.htm" tppabs="http://meipin365.cn/mall/index.php?act=show_joinin&op=index" class="btn" target="_blank"><span>关于入驻</span>&gt;</a></dd></dl></li></ul></div></div>
+
+                <div id="footer">
+
+                    <div class="wrapper">
+
+                        <div class="screen clearfix">
+
+                            <div class="fl right-flag">
+
+                            <a href="javascript:if(confirm(%27http://webscan.360.cn/index/checkwebsite/url/meipin365.cn  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://webscan.360.cn/index/checkwebsite/url/meipin365.cn%27" tppabs="http://webscan.360.cn/index/checkwebsite/url/meipin365.cn"><img border="0" src="../../img.webscan.360.cn/status/pai/hash/733f87ec5026411d0fc492a133d91225.png" tppabs="http://img.webscan.360.cn/status/pai/hash/733f87ec5026411d0fc492a133d91225" style="width:93px; height:34px;"></a>
+
+                            </div>
+
+
+
+                            <div class="fl about-us"><p><a href="javascript:if(confirm(%27http://meipin365.cn/mall/  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/%27" tppabs="http://meipin365.cn/mall">返回首页</a><span>|</span> <a  href="http://meipin365.cn/member/index.php?act=article&amp;op=show&amp;article_id=22">关于美品</a><span>|</span> <a  href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=7  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=7%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=article&ac_id=7">合作品牌</a><span>|</span> <a  href="http://meipin365.cn/member/index.php?act=article&amp;op=show&amp;article_id=47">商家入驻</a><span>|</span> <a  href="">营销中心</a><span>|</span><a href="javascript:if(confirm(%27http://meipin365.cn/mall/index.php?act=link&op=index  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/index.php?act=link&op=index%27" tppabs="http://meipin365.cn/mall/index.php?act=link&op=index">友情链接</a><span>|</span>客服电话：<a class="red">400-612-3315</a></p>
+
+                                <p>CopyRight © 2007-2016 美品商城交流中心 <a href="javascript:if(confirm(%27http://www.miibeian.gov.cn/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.miibeian.gov.cn/%27" tppabs="http://www.miibeian.gov.cn/" target="_blank" mxf="sqde" style="color:#666">豫ICP备16001583</a> 河南汇众益丰电子商务有限公司 版权所有 </p>
+
+                                <p><a >增值电信业务经营许可证 豫B2-20160095<a><a href="javascript:if(confirm(%27http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41010802000001  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41010802000001%27" tppabs="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41010802000001"><img src="../data/resource/img/gaba.png" tppabs="http://meipin365.cn/data/resource/img/gaba.png"/> 豫公网安备 41010802000001号</a>&nbsp;
+                                            <a >食品经营许可证 JY14101080000498<a></p>
+
+                                <p></p>
+
+
+
+                            </div>
+
+                            <a href="javascript:if(confirm(%27http://218.28.13.36:8999/TopICRS/certificateAction.do?id=201604280000001194  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://218.28.13.36:8999/TopICRS/certificateAction.do?id=201604280000001194%27" tppabs="http://218.28.13.36:8999/TopICRS/certificateAction.do?id=201604280000001194" target="_blank" ><img src="../data/resource/img/zzgs_icon.jpg" tppabs="http://meipin365.cn/data/resource/img/zzgs_icon.jpg" style="height:40px; width:auto; margin-left: 10px;" /><a>
+
+                        </div>
+
+
+
+
+
+</div><script type="text/javascript" src="../data/resource/js/jquery.cookie.js" tppabs="http://meipin365.cn/data/resource/js/jquery.cookie.js"></script><link href="../data/resource/js/perfect-scrollbar.min.css" tppabs="http://meipin365.cn/data/resource/js/perfect-scrollbar.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="../data/resource/js/perfect-scrollbar.min.js" tppabs="http://meipin365.cn/data/resource/js/perfect-scrollbar.min.js"></script> <script type="text/javascript" src="../data/resource/js/qtip/jquery.qtip.min.js" tppabs="http://meipin365.cn/data/resource/js/qtip/jquery.qtip.min.js"></script><link href="../data/resource/js/qtip/jquery.qtip.min.css" tppabs="http://meipin365.cn/data/resource/js/qtip/jquery.qtip.min.css" rel="stylesheet" type="text/css"><!-- 对比 --> <script src="resource/js/compare.js" tppabs="http://meipin365.cn/mall/resource/js/compare.js"></script> <script type="text/javascript">
+
+    $(function () {
+
+// Membership card
+
+        $('[nctype="mcard"]').membershipCard({type: 'shop'});
+
+    });
+
+        </script>
+		
+		<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "../../hm.baidu.com/hm.js-867a2cfd2a04b77f044fb1fa9848e5f3.js"/*tpa=http://hm.baidu.com/hm.js?867a2cfd2a04b77f044fb1fa9848e5f3*/;
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>

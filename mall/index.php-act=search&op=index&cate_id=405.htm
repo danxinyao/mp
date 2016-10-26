@@ -1,0 +1,1232 @@
+<!doctype html><html lang="zh"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>美品商城 - 牙膏/牙粉</title><meta name="keywords" content="美品商城" /><meta name="description" content="美品商城" /> <meta name="renderer" content="webkit"><meta name="renderer" content="ie-stand"><style type="text/css">body { _behavior: url(templates/default/css/csshover.htc)/*tpa=http://meipin365.cn/mall/templates/default/css/csshover.htc*/;}</style><link href="templates/default/css/base.css" tppabs="http://meipin365.cn/mall/templates/default/css/base.css" rel="stylesheet" type="text/css"><link href="templates/default/css/home_header.css" tppabs="http://meipin365.cn/mall/templates/default/css/home_header.css" rel="stylesheet" type="text/css"><link href="resource/font/font-awesome/css/font-awesome.min.css" tppabs="http://meipin365.cn/mall/resource/font/font-awesome/css/font-awesome.min.css" rel="stylesheet" /><!--[if IE 7]>  <link rel="stylesheet" href="resource/font/font-awesome/css/font-awesome-ie7.min.css" tppabs="http://meipin365.cn/mall/resource/font/font-awesome/css/font-awesome-ie7.min.css"><![endif]--><!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --><!--[if lt IE 9]>      <script src="../data/resource/js/html5shiv.js" tppabs="http://meipin365.cn/data/resource/js/html5shiv.js"></script>      <script src="../data/resource/js/respond.min.js" tppabs="http://meipin365.cn/data/resource/js/respond.min.js"></script><![endif]--><script>var COOKIE_PRE = '775A_';var _CHARSET = 'utf-8';var LOGIN_SITE_URL = 'http://meipin365.cn/member/';var MEMBER_SITE_URL = 'http://meipin365.cn/member/';var SITEURL = 'http://meipin365.cn/mall/';var SHOP_SITE_URL = 'http://meipin365.cn/mall/';var RESOURCE_SITE_URL = 'http://meipin365.cn/data/resource';var RESOURCE_SITE_URL = 'http://meipin365.cn/data/resource';var SHOP_TEMPLATES_URL = 'http://meipin365.cn/mall/templates/default/';</script><script>var pc_style = ""var browser = {versions: function () {var u = navigator.userAgent, app = navigator.appVersion;return {trident: u.indexOf('Trident') > -1,presto: u.indexOf('Presto') > -1,webKit: u.indexOf('AppleWebKit') > -1,gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/) && u.indexOf('QIHU') && u.indexOf('Chrome') < 0,ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1,iPad: u.indexOf('iPad') > -1,webApp: u.indexOf('Safari') == -1,ua: u};}(),language: (navigator.browserLanguage || navigator.language).toLowerCase()}if (browser.versions.mobile && !browser.versions.iPad) {this.location = "http://meipin365.cn/wap/"; }</script><script src="../data/resource/js/jquery.js" tppabs="http://meipin365.cn/data/resource/js/jquery.js"></script><script src="../data/resource/js/common.js" tppabs="http://meipin365.cn/data/resource/js/common.js" charset="utf-8"></script><script src="../data/resource/js/jquery-ui/jquery.ui.js" tppabs="http://meipin365.cn/data/resource/js/jquery-ui/jquery.ui.js"></script><script src="../data/resource/js/jquery.validation.min.js" tppabs="http://meipin365.cn/data/resource/js/jquery.validation.min.js"></script><script src="../data/resource/js/dialog/dialog.js" tppabs="http://meipin365.cn/data/resource/js/dialog/dialog.js" id="dialog_js" charset="utf-8"></script><script type="text/javascript">var PRICE_FORMAT = '&yen;%s';$(function(){	//首页左侧分类菜单	$(".category ul.menu").find("li").each(		function() {			$(this).hover(				function() {				    var cat_id = $(this).attr("cat_id");					var menu = $(this).find("div[cat_menu_id='"+cat_id+"']");					menu.show();					$(this).addClass("hover");										var menu_height = menu.height();					if (menu_height < 60) menu.height(80);					menu_height = menu.height();					var li_top = $(this).position().top;					$(menu).css("top",-li_top + 47);				},				function() {					$(this).removeClass("hover");				    var cat_id = $(this).attr("cat_id");					$(this).find("div[cat_menu_id='"+cat_id+"']").hide();				}			);		}	);	$(".mod_minicart").hover(function() {		$("#nofollow,#minicart_list").addClass("on");	},	function() {		$("#nofollow,#minicart_list").removeClass("on");	});	$('.mod_minicart').mouseover(function(){// 运行加载购物车		load_cart_information();		$(this).unbind('mouseover');	});    	// input ajax tips	$('#keyword').focus(function(){		if ($(this).val() == $(this).attr('title')) {			$(this).val('').removeClass('tips');		}	}).blur(function(){		if ($(this).val() == '' || $(this).val() == $(this).attr('title')) {			$(this).addClass('tips').val($(this).attr('title'));		}	}).blur().autocomplete({        source: function (request, response) {            $.getJSON('index.php-act=search&op=auto_complete.htm'/*tpa=http://meipin365.cn/mall/index.php?act=search&op=auto_complete*/, request, function (data, status, xhr) {                $('#top_search_box > ul').unwrap();                response(data);                if (status == 'success') {                 $('body > ul:last').wrap("<div id='top_search_box'></div>").css({'zIndex':'1000','width':'362px'});                }            });       },		select: function(ev,ui) {			$('#keyword').val(ui.item.label);			$('#top_search_form').submit();		}	});		$('#button').click(function(){      if ($('#keyword').val() == '') {        if ($('#keyword').attr('data-value') == '') {          return false      } else {        window.location.href="index.php-act=search&op=index&keyword=.htm"/*tpa=http://meipin365.cn/mall/index.php?act=search&op=index&keyword=*/+$('#keyword').attr('data-value');          return false;      }      }  });  $(".head-search-bar").hover(null,  function() {    $('#search-tip').hide();  });  // input ajax tips  $('#keyword').focus(function(){$('#search-tip').show()}).autocomplete({    //minLength:0,        source: function (request, response) {            $.getJSON('index.php-act=search&op=auto_complete.htm'/*tpa=http://meipin365.cn/mall/index.php?act=search&op=auto_complete*/, request, function (data, status, xhr) {                $('#top_search_box > ul').unwrap();                response(data);                if (status == 'success') {                    $('#search-tip').hide();                    $(".head-search-bar").unbind('mouseover');                    $('body > ul:last').wrap("<div id='top_search_box'></div>").css({'zIndex':'1000','width':'362px'});                }            });       },    select: function(ev,ui) {      $('#keyword').val(ui.item.label);      $('#top_search_form').submit();    }  });  $('#search-his-del').on('click',function(){$.cookie('775A_his_sh',null,{path:'/'});$('#search-his-list').empty();});});</script></head><body><!-- PublicTopLayout Begin -->
+<!--By美品商城-->
+
+<div id="append_parent"></div>
+
+<div id="ajaxwaitid"></div>
+
+
+<div id="ncToolbar" class="nc-appbar">
+
+  <div class="nc-appbar-tabs" id="appBarTabs">
+
+    <div class="ever">
+
+      
+      <div class="cart"><a href="javascript:void(0);" id="rtoolbar_cart"><span class="icon"></span> <span class="name">购物车</span><i id="rtoobar_cart_count" class="new_msg" style="display:none;"></i></a></div>
+
+      
+      
+      <div class="compare"><a href="javascript:void(0);" id="compare"><span class="icon"></span><span class="tit">商品对比</span></a></div>
+
+      
+    </div>
+
+    <div class="variation">
+
+      <div class="middle">
+
+        
+        <div class="user" nctype="a-barLoginBox">
+
+        <a href="javascript:void(0);" >
+
+          <div class="avatar"><img src="../../img.meipin365.cn/data/upload/mall/common/default_user_portrait.gif" tppabs="http://img.meipin365.cn/data/upload/mall/common/default_user_portrait.gif"/></div>
+
+          <span class="tit" >会员登录</span>
+
+        </a>
+
+        </div>
+
+		<div class="user-login-box" nctype="barLoginBox" style="display:none;"> <i class="arrow"></i> <a href="javascript:void(0);" class="close-a" nctype="close-barLoginBox" title="关闭">X</a>
+
+          <form id="login_form" method="post" action="http://meipin365.cn/member/index.php?act=login&op=login" onsubmit="ajaxpost('login_form', '', '', 'onerror')">
+
+            <input type='hidden' name='formhash' value='1t4h3gW-3lou5hoEqh8s2f3jtFX7P7i' />  <input type="hidden" name="form_submit" value="ok" />
+
+            <input name="nchash" type="hidden" value="18685bf0">
+
+            <dl>
+
+              <dt><strong>登录名</strong></dt>
+
+              <dd>
+
+                <input type="text" class="text" autocomplete="off" name="user_name" autofocus>
+
+                <label></label>
+
+              </dd>
+
+            </dl>
+
+            <dl>
+
+              <dt><strong>登录密码</strong><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=forget_password  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=forget_password%27" tppabs="http://meipin365.cn/member/index.php?act=login&op=forget_password" target="_blank">忘记登录密码？</a></dt>
+
+              <dd>
+
+                <input type="password" class="text" name="password" autocomplete="off">
+
+                <label></label>
+
+              </dd>
+
+            </dl>
+
+                        <dl>
+
+              <dt><strong>验证码</strong><a href="javascript:void(0)" class="ml5" onclick="javascript:document.getElementById('codeimage').src='index.php?act=seccode&amp;op=makecode&amp;nchash=18685bf0&amp;t=' + Math.random();">更换验证码</a></dt>
+
+              <dd>
+
+                <input type="text" name="captcha" autocomplete="off" class="text w130" id="captcha" maxlength="4" size="10">
+
+                <img src="" name="codeimage" border="0" id="codeimage" class="vt">
+
+                <label></label>
+
+              </dd>
+
+            </dl>
+
+                        <div class="bottom">
+
+              <input type="submit" class="submit" value="确认">
+
+              <input type="hidden" value="" name="ref_url">
+
+              <a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=register&  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=register&%27" tppabs="http://meipin365.cn/member/index.php?act=login&op=register&" target="_blank">注册新用户</a> 
+
+			        
+      <h4></h4>
+
+               
+                            <a href="javascript:void(0);" onclick="ajax_form('weixin_form', '微信账号登录', 'http://meipin365.cn/member/index.php?act=connect_wx&op=index', 360);" title="微信账号登录" class="mr20">微信</a>
+							
+                                          
+                          </div>
+
+          </form>
+
+        </div>
+
+        
+        <div class="prech">&nbsp;</div>
+
+        
+        <div class="chat"><a href="javascript:void(0);" id="chat_show_user"><span class="icon"></span><i id="new_msg" class="new_msg" style="display:none;"></i><span class="tit">在线联系</span></a></div>
+
+        
+      </div>
+
+      <!--<div class="l_qrcode"><a href="javascript:void(0);" class=""><span class="icon"></span><code><img src="http://img.meipin365.cn/data/upload/mobile/"></code></a></div>-->
+
+      <div class="gotop"><a href="javascript:void(0);" id="gotop"><span class="icon"></span><span class="tit">返回顶部</span></a></div>
+
+    </div>
+
+    <div class="content-box" id="content-compare">
+
+      <div class="top">
+
+        <h3>商品对比</h3>
+
+        <a href="javascript:void(0);" class="close" title="隐藏"></a></div>
+
+      <div id="comparelist"></div>
+
+    </div>
+
+    <div class="content-box" id="content-cart">
+
+      <div class="top">
+
+        <h3>我的购物车</h3>
+
+        <a href="javascript:void(0);" class="close" title="隐藏"></a></div>
+
+      <div id="rtoolbar_cartlist"></div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+//登录开关状态
+
+var connect_qq = "0";
+
+var connect_sn = "0";
+
+var connect_wx = "1";
+
+$(function(){
+
+	$(".l_qrcode a").hover(function() {
+
+		$(this).addClass("hover");
+
+	},
+
+	function() {
+
+		$(this).removeClass("hover");
+
+	});
+
+	
+
+});
+
+//返回顶部
+
+backTop=function (btnId){
+
+	var btn=document.getElementById(btnId);
+
+	var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+	window.onscroll=set;
+
+	btn.onclick=function (){
+
+		btn.style.opacity="0.5";
+
+		window.onscroll=null;
+
+		this.timer=setInterval(function(){
+
+		    scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+			scrollTop-=Math.ceil(scrollTop*0.1);
+
+			if(scrollTop==0) clearInterval(btn.timer,window.onscroll=set);
+
+			if (document.documentElement.scrollTop > 0) document.documentElement.scrollTop=scrollTop;
+
+			if (document.body.scrollTop > 0) document.body.scrollTop=scrollTop;
+
+		},10);
+
+	};
+
+	function set(){
+
+	    scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+	    btn.style.opacity=scrollTop?'1':"0.5";
+
+	}
+
+};
+
+backTop('gotop');
+
+
+
+//动画显示边条内容区域
+
+$(function() {
+
+    ncToolbar();
+
+    $(window).resize(function() {
+
+        ncToolbar();
+
+    });
+
+    function ncToolbar() {
+
+        if ($(window).width() >= 1240) {
+
+            $('#appBarTabs >.variation').show();
+
+        } else {
+
+            $('#appBarTabs >.variation').hide();
+
+        }
+
+    }
+
+    $('#appBarTabs').hover(
+
+        function() {
+
+            $('#appBarTabs >.variation').show();
+
+        }, 
+
+        function() {
+
+            ncToolbar();
+
+        }
+
+    );
+
+    $("#compare").click(function(){
+
+    	if ($("#content-compare").css('right') == '-210px') {
+
+ 		   loadCompare(false);
+
+ 		   $('#content-cart').animate({'right': '-210px'});
+
+  		   $("#content-compare").animate({right:'35px'});
+
+    	} else {
+
+    		$(".close").click();
+
+    		$(".chat-list").css("display",'none');
+
+        }
+
+	});
+
+    $("#rtoolbar_cart").click(function(){
+
+        if ($("#content-cart").css('right') == '-210px') {
+
+         	$('#content-compare').animate({'right': '-210px'});
+
+    		$("#content-cart").animate({right:'35px'});
+
+    		if (!$("#rtoolbar_cartlist").html()) {
+
+    			$("#rtoolbar_cartlist").load('index.php?act=cart&op=ajax_load&type=html');
+
+    		}
+
+        } else {
+
+        	$(".close").click();
+
+        	$(".chat-list").css("display",'none');
+
+        }
+
+	});
+
+	$(".close").click(function(){
+
+		$(".content-box").animate({right:'-210px'});
+
+      });
+
+
+
+	$(".quick-menu dl").hover(function() {
+
+		$(this).addClass("hover");
+
+	},
+
+	function() {
+
+		$(this).removeClass("hover");
+
+	});
+
+		$(".links_a").hover(function() {
+
+		$(this).addClass("hover");
+
+	},
+
+	function() {
+
+		$(this).removeClass("hover");
+
+	});
+
+
+
+    // 右侧bar用户信息
+
+    $('div[nctype="a-barUserInfo"]').click(function(){
+
+        $('div[nctype="barUserInfo"]').toggle();
+
+    });
+
+    // 右侧bar登录
+
+    $('div[nctype="a-barLoginBox"]').click(function(){
+        
+        $('.wx').click();
+        $('div[nctype="barLoginBox"]').toggle();
+        document.getElementById('codeimage').src='index.php?act=seccode&op=makecode&nchash=18685bf0&t=' + Math.random();
+
+    });
+
+    $('a[nctype="close-barLoginBox"]').click(function(){
+
+        $('div[nctype="barLoginBox"]').toggle();
+
+    });
+
+    
+    });
+
+</script>
+
+
+
+<div class="public-top-layout w">
+
+  <div class="topbar wrapper">
+
+    <div class="user-entry">
+
+      
+      您好，欢迎来到 <a href="javascript:if(confirm(%27http://meipin365.cn/mall/  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/%27" tppabs="http://meipin365.cn/mall" title="首页" alt="首页">美品商城</a>
+      <span class="other">
+
+      
+      
+         
+      </span>
+
+       
+
+      <span>[<a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=index  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=index%27" tppabs="http://meipin365.cn/member/index.php?act=login&op=index">登录</a>]</span> <span>[<a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=register  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=register%27" tppabs="http://meipin365.cn/member/index.php?act=login&op=register">注册</a>]</span>
+<!-- http://meipin365.cn/member/index.php?act=login&op=register&spreaderid=1475  -->
+      
+    </div>
+
+    <div class="quick-menu">
+
+	
+	<dl>
+
+        <dt><em class="ico_shop"></em><a href="index.php-act=show_joinin&op=index.htm" tppabs="http://meipin365.cn/mall/index.php?act=show_joinin&op=index" title="商家管理">商家管理</a><i></i></dt>
+
+        <dd>
+
+          <ul>
+
+            <li><a href="index.php-act=show_joinin&op=index.htm" tppabs="http://meipin365.cn/mall/index.php?act=show_joinin&op=index" title="招商入驻">招商入驻</a></li>
+
+            <li><a href="index.php-act=seller_login&op=show_login.htm" tppabs="http://meipin365.cn/mall/index.php?act=seller_login&op=show_login" target="_blank" title="登录商家管理中心">商家登录</a></li>
+
+          </ul>
+
+        </dd>
+
+      </dl>
+
+      <dl>
+
+        <dt><em class="ico_order"></em><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order%27" tppabs="http://meipin365.cn/mall/index.php?act=member_order">我的订单</a><i></i></dt>
+
+        <dd>
+
+          <ul>
+
+            <li><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order%26state_type%3Dstate_new  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order%26state_type%3Dstate_new%27" tppabs="http://meipin365.cn/mall/index.php?act=member_order&state_type=state_new">待付款订单</a></li>
+
+            <li><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order%26state_type%3Dstate_send  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order%26state_type%3Dstate_send%27" tppabs="http://meipin365.cn/mall/index.php?act=member_order&state_type=state_send">待确认收货</a></li>
+
+            <li><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order%26state_type%3Dstate_noeval  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dmember_order%26state_type%3Dstate_noeval%27" tppabs="http://meipin365.cn/mall/index.php?act=member_order&state_type=state_noeval">待评价交易</a></li>
+
+          </ul>
+
+        </dd>
+
+      </dl>
+
+      <dl>
+
+        <dt><em class="ico_store"></em><a href="index.php-act=member_favorite_goods&op=fglist.htm" tppabs="http://meipin365.cn/mall/index.php?act=member_favorite_goods&op=fglist">我的收藏</a><i></i></dt>
+
+        <dd>
+
+          <ul>
+
+            <li><a href="index.php-act=member_favorite_goods&op=fglist.htm" tppabs="http://meipin365.cn/mall/index.php?act=member_favorite_goods&op=fglist">商品收藏</a></li>
+
+            <li><a href="index.php-act=member_favorite_store&op=fslist.htm" tppabs="http://meipin365.cn/mall/index.php?act=member_favorite_store&op=fslist">店铺收藏</a></li>
+
+          </ul>
+
+        </dd>
+
+      </dl>
+
+      <dl>
+
+        <dt><em class="ico_service"></em>客户服务<i></i></dt>
+
+        <dd>
+
+          <ul>
+
+            <li><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=2  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=2%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=article&ac_id=2">帮助中心</a></li>
+
+            <li><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=5  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=5%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=article&ac_id=5">售后服务</a></li>
+
+            <li><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=6  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=6%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=article&ac_id=6">客服中心</a></li>
+
+          </ul>
+
+        </dd>
+
+      </dl>
+
+      
+      
+    </div>
+
+  </div>
+
+</div>
+
+<!-- PublicHeadLayout Begin --><div class="header-wrap">  <header class="public-head-layout wrapper">    <h1 class="site-logo"><a href="javascript:if(confirm(%27http://meipin365.cn/mall/  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/%27" tppabs="http://meipin365.cn/mall"><img src="../../img.meipin365.cn/data/upload/mall/common/05140446097951879.png" tppabs="http://img.meipin365.cn/data/upload/mall/common/05140446097951879.png" class="pngFix"></a></h1>    <div class="logo-test">致美臻品.完美购物</div><!--    好货；好快；好便宜-->    <div class="head-search-layout">      <div class="head-search-bar" id="head-search-bar">     <div class="hd_serach_tab" id="hdSearchTab">      <ul><li act="search" class="current"><span>商品</span><i class="arrow"></i></li><li act="store_list"><span>店铺</span></li></ul><i></i></div>        <form action="http://meipin365.cn/mall" method="get" class="search-form" id="top_search_form">          <input name="act" id="search_act" value="search" type="hidden">                    <input name="keyword" id="keyword" type="text" class="input-text" value="" maxlength="60" x-webkit-speech lang="zh-CN" onwebkitspeechchange="foo()" placeholder="空调柜机" data-value="%E6%9F%9C%E6%9C%BA" x-webkit-grammar="builtin:search" autocomplete="off" />          <input type="submit" id="button" value="搜索" class="input-submit">        </form>        <div class="search-tip" id="search-tip">          <div class="search-history">            <div class="title">历史纪录<a href="javascript:void(0);" id="search-his-del">清除</a></div>            <ul id="search-his-list">                                          <li><a href="index.php-act=search&op=index&keyword=电视.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&keyword=%E7%94%B5%E8%A7%86">电视</a></li>                            <li><a href="index.php-act=search&op=index&keyword=冰箱.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&keyword=%E5%86%B0%E7%AE%B1">冰箱</a></li>                            <li><a href="index.php-act=search&op=index&keyword=柜机.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&keyword=%E6%9F%9C%E6%9C%BA">柜机</a></li>                                        </ul>          </div>          <div class="search-hot">            <div class="title">热门搜索...</div>            <ul>                                          <li><a href="index.php-act=search&op=index&keyword=挂机.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&keyword=%E6%8C%82%E6%9C%BA">挂机</a></li>                            <li><a href="index.php-act=search&op=index&keyword=柜机.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&keyword=%E6%9F%9C%E6%9C%BA">柜机</a></li>                            <li><a href="index.php-act=search&op=index&keyword=空调.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&keyword=%E7%A9%BA%E8%B0%83">空调</a></li>                                        </ul>          </div>        </div>      </div>      <div class="keyword">        <ul>                    <li><a href="index.php-act=search&op=index&keyword=冰箱.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&keyword=%E5%86%B0%E7%AE%B1">冰箱</a></li>                    <li><a href="index.php-act=search&op=index&keyword=空调.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&keyword=%E7%A9%BA%E8%B0%83">空调</a></li>                    <li><a href="index.php-act=search&op=index&keyword=电视.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&keyword=%E7%94%B5%E8%A7%86">电视</a></li>                    <li><a href="index.php-act=search&op=index&keyword=柜机.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&keyword=%E6%9F%9C%E6%9C%BA">柜机</a></li>                    <li><a href="index.php-act=search&op=index&keyword=挂机.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&keyword=%E6%8C%82%E6%9C%BA">挂机</a></li>                  </ul>      </div>    </div>    <div class="mod_minicart" style="">		<a id="nofollow" target="_self" href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dcart  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dcart%27" tppabs="http://meipin365.cn/mall/index.php?act=cart" class="mini_cart_btn">                        <i class="cart_icon"></i> 			<em class="cart_num">0</em>			<span>购物车</span>		</a>		<div id="minicart_list" class="minicart_list">			<div class="spacer"></div>			<div class="list_detail">				<!--购物车有商品时begin-->				<ul><img class="loading" src="templates/default/images/loading.gif" tppabs="http://meipin365.cn/mall/templates/default/images/loading.gif" /></ul> 				<div class="checkout_box">                    <p class="fl">共<em class="tNum">0</em>件商品,合计：<em class="tSum">0</em></p>					<a rel="nofollow" class="checkout_btn" href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dcart  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=login&op=index&ref_url=%2Fmall%2Findex.php%3Fact%3Dcart%27" tppabs="http://meipin365.cn/mall/index.php?act=cart" target="_self"> 去结算 </a>				</div>				<div style="" class="none_tips">					<i> </i>					<p>购物车中没有商品，赶紧去选购！</p>				</div>			</div>		</div>	</div><!--    <div class="head-user-menu">      <dl class="my-cart">                <dt><span class="ico"></span>购物车结算<i class="arrow"></i></dt>        <dd>          <div class="sub-title">            <h4>最新加入的商品</h4>          </div>          <div class="incart-goods-box">            <div class="incart-goods"> <img class="loading" src="http://meipin365.cn/mall/templates/default/images/loading.gif" /> </div>          </div>          <div class="checkout"> <span class="total-price">共<i>0</i>种商品</span><a href="http://meipin365.cn/mall/index.php?act=cart" class="btn-cart">结算购物车中的商品</a> </div>        </dd>      </dl>    </div>-->  </header></div><!-- PublicHeadLayout End --> <!-- publicNavLayout Begin --><nav class="public-nav-layout ">  <div class="wrapper">    <div class="all-category">      <div class="title"><i></i><h3><a href="index.php-act=category&op=index.htm" tppabs="http://meipin365.cn/mall/index.php?act=category&op=index">全部商品分类</a></h3></div><div class="category"><ul class="menu"><li cat_id="1" class="odd" ><div class="class"><h4><a href=" index.php-act=search&op=index&cate_id=1.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=1">家用电器</a></h4><span class="arrow"></span> </div><div class="sub-class" cat_menu_id="1"><div class="sub-class-content"><div class="recommend-class"></div><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=2.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=2">大家电</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=3.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=3">电视</a><a href="index.php-act=search&op=index&cate_id=4.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=4">空调</a><a href="index.php-act=search&op=index&cate_id=5.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=5">冰箱</a><a href="index.php-act=search&op=index&cate_id=6.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=6">洗衣机</a><a href="index.php-act=search&op=index&cate_id=7.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=7">烟机/灶具</a><a href="index.php-act=search&op=index&cate_id=8.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=8">热水器</a><a href="index.php-act=search&op=index&cate_id=9.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=9">消毒柜/洗碗机</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=12.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=12">生活电器</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=13.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=13">空气净化器</a><a href="index.php-act=search&op=index&cate_id=337.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=337">壁挂炉</a><a href="index.php-act=search&op=index&cate_id=378.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=378">吸尘器</a><a href="index.php-act=search&op=index&cate_id=16.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=16">加湿器</a><a href="index.php-act=search&op=index&cate_id=17.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=17">净水设备</a><a href="index.php-act=search&op=index&cate_id=18.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=18">饮水机</a><a href="index.php-act=search&op=index&cate_id=14.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=14">电风扇</a><a href="index.php-act=search&op=index&cate_id=331.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=331">空调扇</a><a href="index.php-act=search&op=index&cate_id=20.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=20">挂烫机/熨斗</a><a href="index.php-act=search&op=index&cate_id=24.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=24">其它生活电器</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=25.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=25">厨房电器</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=26.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=26">料理/榨汁机</a><a href="index.php-act=search&op=index&cate_id=27.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=27">豆浆机</a><a href="index.php-act=search&op=index&cate_id=28.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=28">电饭煲</a><a href="index.php-act=search&op=index&cate_id=29.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=29">电压力锅</a><a href="index.php-act=search&op=index&cate_id=30.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=30">面包机</a><a href="index.php-act=search&op=index&cate_id=33.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=33">电烤箱</a><a href="index.php-act=search&op=index&cate_id=34.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=34">电磁炉</a><a href="index.php-act=search&op=index&cate_id=38.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=38">电火锅</a><a href="index.php-act=search&op=index&cate_id=39.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=39">电水壶/热水瓶</a></dd></dl></div><div class="sub-class-right"><div class="adv-promotions"></div></div></div></li><li cat_id="43" class="even" ><div class="class"><h4><a href=" index.php-act=search&op=index&cate_id=43.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=43">数码办公</a></h4><span class="arrow"></span> </div><div class="sub-class" cat_menu_id="43"><div class="sub-class-content"><div class="recommend-class"></div><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=170.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=170">手机通讯</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=171.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=171">手机</a><a href="index.php-act=search&op=index&cate_id=514.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=514">手机套餐包</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=412.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=412">智能设备</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=418.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=418">智能手表</a><a href="index.php-act=search&op=index&cate_id=419.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=419">其他设备</a><a href="index.php-act=search&op=index&cate_id=420.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=420">智能眼镜</a><a href="index.php-act=search&op=index&cate_id=413.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=413">无人机</a><a href="index.php-act=search&op=index&cate_id=414.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=414">机器人</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=44.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=44">手机配件</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=448.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=448">移动电源</a><a href="index.php-act=search&op=index&cate_id=45.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=45">手机电池</a><a href="index.php-act=search&op=index&cate_id=46.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=46">蓝牙耳机</a><a href="index.php-act=search&op=index&cate_id=47.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=47">充电器/数据线</a><a href="index.php-act=search&op=index&cate_id=48.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=48">手机耳机</a><a href="index.php-act=search&op=index&cate_id=49.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=49">手机贴膜</a><a href="index.php-act=search&op=index&cate_id=50.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=50">手机存储卡</a><a href="index.php-act=search&op=index&cate_id=51.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=51">手机保护套</a><a href="index.php-act=search&op=index&cate_id=52.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=52">车载配件</a><a href="index.php-act=search&op=index&cate_id=53.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=53">iPhone 配件</a><a href="index.php-act=search&op=index&cate_id=54.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=54">创意配件</a><a href="index.php-act=search&op=index&cate_id=55.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=55">便携/无线音响</a><a href="index.php-act=search&op=index&cate_id=56.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=56">手机饰品</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=57.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=57">摄影摄像</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=61.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=61">摄像机</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=92.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=92">电脑整机</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=352.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=352">一体机</a><a href="index.php-act=search&op=index&cate_id=93.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=93">笔记本</a><a href="index.php-act=search&op=index&cate_id=96.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=96">平板电脑</a><a href="index.php-act=search&op=index&cate_id=98.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=98">台式机</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=447.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=447">商用产品</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=450.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=450">台式机</a><a href="index.php-act=search&op=index&cate_id=453.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=453">笔记本</a><a href="index.php-act=search&op=index&cate_id=454.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=454">一体机</a><a href="index.php-act=search&op=index&cate_id=455.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=455">服务器</a></dd></dl></div><div class="sub-class-right"><div class="adv-promotions"></div></div></div></li><li cat_id="173" class="odd" ><div class="class"><h4><a href=" index.php-act=search&op=index&cate_id=173.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=173">母婴用品</a></h4><span class="arrow"></span> </div><div class="sub-class" cat_menu_id="173"><div class="sub-class-content"><div class="recommend-class"></div><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=174.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=174">奶粉</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=177.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=177">1段奶粉</a><a href="index.php-act=search&op=index&cate_id=178.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=178">2段奶粉</a><a href="index.php-act=search&op=index&cate_id=179.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=179">3段奶粉</a><a href="index.php-act=search&op=index&cate_id=180.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=180">4段奶粉</a><a href="index.php-act=search&op=index&cate_id=175.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=175">品牌奶粉</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=194.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=194">尿裤湿巾</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=196.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=196">NB</a><a href="index.php-act=search&op=index&cate_id=197.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=197">S号</a><a href="index.php-act=search&op=index&cate_id=198.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=198">M号</a><a href="index.php-act=search&op=index&cate_id=199.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=199">L号</a><a href="index.php-act=search&op=index&cate_id=200.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=200">XL/XXL号</a><a href="index.php-act=search&op=index&cate_id=202.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=202">婴儿湿巾</a><a href="index.php-act=search&op=index&cate_id=195.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=195">品牌尿裤</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=214.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=214">洗护用品</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=445.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=445">洗衣液/皂</a><a href="index.php-act=search&op=index&cate_id=444.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=444">驱蝇止痒</a><a href="index.php-act=search&op=index&cate_id=219.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=219">护理用品</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=221.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=221">童车童床</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=222.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=222">婴儿推车</a><a href="index.php-act=search&op=index&cate_id=223.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=223">餐椅摇椅</a><a href="index.php-act=search&op=index&cate_id=224.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=224">婴儿床</a><a href="index.php-act=search&op=index&cate_id=225.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=225">学步车</a><a href="index.php-act=search&op=index&cate_id=226.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=226">三轮车</a><a href="index.php-act=search&op=index&cate_id=227.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=227">自行车</a><a href="index.php-act=search&op=index&cate_id=228.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=228">电动车</a><a href="index.php-act=search&op=index&cate_id=229.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=229">健身车</a><a href="index.php-act=search&op=index&cate_id=230.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=230">安全座椅</a></dd></dl></div><div class="sub-class-right"><div class="adv-promotions"></div></div></div></li><li cat_id="248" class="even" ><div class="class"><h4><a href=" index.php-act=search&op=index&cate_id=248.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=248">食品酒类</a></h4><span class="arrow"></span> </div><div class="sub-class" cat_menu_id="248"><div class="sub-class-content"><div class="recommend-class"></div><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=256.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=256">休闲食品</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=257.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=257">休闲零食</a><a href="index.php-act=search&op=index&cate_id=259.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=259">肉干肉脯</a><a href="index.php-act=search&op=index&cate_id=258.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=258">坚果炒货</a><a href="index.php-act=search&op=index&cate_id=260.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=260">蜜饯果干</a><a href="index.php-act=search&op=index&cate_id=261.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=261">糖果/巧克力</a><a href="index.php-act=search&op=index&cate_id=262.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=262">饼干蛋糕</a><a href="index.php-act=search&op=index&cate_id=458.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=458">月饼糕点</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=273.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=273">粮油调味</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=278.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=278">方便食品</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=249.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=249">进口食品</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=449.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=449">进口酒水</a><a href="index.php-act=search&op=index&cate_id=456.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=456">方便速食</a><a href="index.php-act=search&op=index&cate_id=250.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=250">牛奶</a><a href="index.php-act=search&op=index&cate_id=251.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=251">饼干蛋糕</a><a href="index.php-act=search&op=index&cate_id=252.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=252">糖果/巧克力</a><a href="index.php-act=search&op=index&cate_id=253.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=253">休闲零食</a><a href="index.php-act=search&op=index&cate_id=254.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=254">粮油调味</a><a href="index.php-act=search&op=index&cate_id=255.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=255">冲调饮品</a><a href="index.php-act=search&op=index&cate_id=335.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=335">饮料</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=431.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=431">冲调饮品</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=432.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=432">果蔬汁</a><a href="index.php-act=search&op=index&cate_id=469.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=469">蜂蜜/柚子茶</a><a href="index.php-act=search&op=index&cate_id=470.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=470">天然粉</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=280.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=280">茗茶</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=282.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=282">普洱</a><a href="index.php-act=search&op=index&cate_id=291.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=291">养生茶</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=293.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=293">中外名酒</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=294.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=294">白酒</a><a href="index.php-act=search&op=index&cate_id=295.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=295">葡萄酒</a><a href="index.php-act=search&op=index&cate_id=297.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=297">啤酒</a><a href="index.php-act=search&op=index&cate_id=298.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=298">黄酒/养生酒</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=493.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=493">禽类蛋品</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=494.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=494">鸭蛋</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=398.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=398">营养保健</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=410.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=410">保健品</a><a href="index.php-act=search&op=index&cate_id=411.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=411">营养补充</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=521.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=521">滋补品</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=522.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=522">阿胶</a></dd></dl></div><div class="sub-class-right"><div class="adv-promotions"></div></div></div></li><li cat_id="353" class="odd" ><div class="class"><h4><a href=" index.php-act=search&op=index&cate_id=353.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=353">家居/厨具</a></h4><span class="arrow"></span> </div><div class="sub-class" cat_menu_id="353"><div class="sub-class-content"><div class="recommend-class"></div><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=519.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=519">家居日用</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=520.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=520">收纳</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=363.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=363">家纺</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=368.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=368">蚊帐</a><a href="index.php-act=search&op=index&cate_id=373.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=373">毯子</a><a href="index.php-act=search&op=index&cate_id=374.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=374">抱枕靠垫</a><a href="index.php-act=search&op=index&cate_id=415.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=415">枕套</a><a href="index.php-act=search&op=index&cate_id=393.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=393">被子</a><a href="index.php-act=search&op=index&cate_id=370.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=370">毛巾浴巾</a><a href="index.php-act=search&op=index&cate_id=364.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=364">床品套件</a><a href="index.php-act=search&op=index&cate_id=366.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=366">枕芯</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=441.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=441">厨房卫浴</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=442.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=442">智能马桶盖</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=515.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=515">定制家居</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=516.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=516">卧室家居定制</a><a href="index.php-act=search&op=index&cate_id=517.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=517">客/餐厅家居定制</a><a href="index.php-act=search&op=index&cate_id=518.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=518">衣帽间家居定制</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=355.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=355">厨具</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=356.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=356">烹饪锅具</a><a href="index.php-act=search&op=index&cate_id=357.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=357">水具酒具</a><a href="index.php-act=search&op=index&cate_id=358.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=358">厨房配件</a><a href="index.php-act=search&op=index&cate_id=359.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=359">餐具</a><a href="index.php-act=search&op=index&cate_id=361.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=361">刀剪砧板</a></dd></dl></div><div class="sub-class-right"><div class="adv-promotions"></div></div></div></li><li cat_id="471" class="even" ><div class="class"><h4><a href=" index.php-act=search&op=index&cate_id=471.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=471">汽车用品</a></h4><span class="arrow"></span> </div><div class="sub-class" cat_menu_id="471"><div class="sub-class-content"><div class="recommend-class"></div><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=472.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=472">汽车装饰</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=475.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=475">脚垫</a><a href="index.php-act=search&op=index&cate_id=476.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=476">座垫</a><a href="index.php-act=search&op=index&cate_id=477.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=477">座套</a><a href="index.php-act=search&op=index&cate_id=478.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=478">后备箱垫</a><a href="index.php-act=search&op=index&cate_id=479.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=479">方向盘套</a><a href="index.php-act=search&op=index&cate_id=480.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=480">头枕</a><a href="index.php-act=search&op=index&cate_id=481.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=481">腰靠</a><a href="index.php-act=search&op=index&cate_id=482.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=482">香水</a><a href="index.php-act=search&op=index&cate_id=483.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=483">空气净化</a><a href="index.php-act=search&op=index&cate_id=484.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=484">功能小件</a><a href="index.php-act=search&op=index&cate_id=485.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=485">车衣</a><a href="index.php-act=search&op=index&cate_id=486.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=486">挂件摆件</a><a href="index.php-act=search&op=index&cate_id=487.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=487">车身装饰件</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=473.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=473">美容清洁</a></h3></dt><dd class="goods-class"></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=474.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=474">车载电器</a></h3></dt><dd class="goods-class"></dd></dl></div><div class="sub-class-right"><div class="adv-promotions"></div></div></div></li><li cat_id="379" class="odd" ><div class="class"><h4><a href=" index.php-act=search&op=index&cate_id=379.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=379">个护化妆</a></h4><span class="arrow"></span> </div><div class="sub-class" cat_menu_id="379"><div class="sub-class-content"><div class="recommend-class"></div><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=388.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=388">身体护肤</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=460.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=460">润肤</a><a href="index.php-act=search&op=index&cate_id=461.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=461">手足护理</a><a href="index.php-act=search&op=index&cate_id=389.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=389">沐浴</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=380.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=380">洗发护发</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=382.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=382">护发</a><a href="index.php-act=search&op=index&cate_id=381.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=381">洗发护发</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=394.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=394">面部护理</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=402.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=402">卸妆</a><a href="index.php-act=search&op=index&cate_id=403.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=403">洁面</a><a href="index.php-act=search&op=index&cate_id=404.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=404">乳液面霜</a><a href="index.php-act=search&op=index&cate_id=429.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=429">爽肤水</a><a href="index.php-act=search&op=index&cate_id=428.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=428">精华</a><a href="index.php-act=search&op=index&cate_id=430.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=430">眼霜</a><a href="index.php-act=search&op=index&cate_id=440.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=440">防晒</a><a href="index.php-act=search&op=index&cate_id=401.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=401">面膜</a><a href="index.php-act=search&op=index&cate_id=446.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=446">套装</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=395.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=395">口腔护理</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=405.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405">牙膏/牙粉</a><a href="index.php-act=search&op=index&cate_id=406.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=406">漱口水</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=396.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=396">女性护理</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=407.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=407">卫生巾/护垫</a><a href="index.php-act=search&op=index&cate_id=408.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=408">私密护理</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=397.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=397">香水彩妆</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=439.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=439">底妆</a><a href="index.php-act=search&op=index&cate_id=427.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=427">眉笔</a><a href="index.php-act=search&op=index&cate_id=426.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=426">眼线/眼影</a><a href="index.php-act=search&op=index&cate_id=409.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=409">唇膏/彩</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=502.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=502">清洁用品</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=503.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=503">纸巾湿巾</a></dd></dl></div><div class="sub-class-right"><div class="adv-promotions"></div></div></div></li><li cat_id="384" class="even" ><div class="class"><h4><a href=" index.php-act=search&op=index&cate_id=384.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=384">服装内衣/运动户外</a></h4><span class="arrow"></span> </div><div class="sub-class" cat_menu_id="384"><div class="sub-class-content"><div class="recommend-class"></div><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=385.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=385">女装</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=399.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=399">旗袍 唐装</a><a href="index.php-act=search&op=index&cate_id=422.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=422">t恤</a><a href="index.php-act=search&op=index&cate_id=386.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=386">精选下装</a><a href="index.php-act=search&op=index&cate_id=425.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=425">精选上装</a><a href="index.php-act=search&op=index&cate_id=421.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=421">浪漫裙装</a><a href="index.php-act=search&op=index&cate_id=424.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=424">特色女装</a><a href="index.php-act=search&op=index&cate_id=423.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=423">家居服</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=465.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=465">配饰</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=488.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=488">袜类</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=504.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=504">工装定制</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=505.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=505">套头卫衣、衫</a><a href="index.php-act=search&op=index&cate_id=506.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=506">棒球衫、开衫</a><a href="index.php-act=search&op=index&cate_id=507.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=507">工装马甲</a></dd></dl></div><div class="sub-class-right"><div class="adv-promotions"></div></div></div></li><li cat_id="495" class="odd" ><div class="class"><h4><a href=" index.php-act=search&op=index&cate_id=495.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=495">鞋子箱包</a></h4><span class="arrow"></span> </div><div class="sub-class" cat_menu_id="495"><div class="sub-class-content"><div class="recommend-class"></div><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=496.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=496">女鞋</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=498.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=498">靴子</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=497.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=497">女包</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=499.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=499">单肩包</a><a href="index.php-act=search&op=index&cate_id=500.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=500">双肩包</a><a href="index.php-act=search&op=index&cate_id=501.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=501">手提包</a></dd></dl></div><div class="sub-class-right"><div class="adv-promotions"></div></div></div></li><li cat_id="390" class="even" ><div class="class"><h4><a href=" index.php-act=search&op=index&cate_id=390.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=390">钟表珠宝</a></h4><span class="arrow"></span> </div><div class="sub-class" cat_menu_id="390"><div class="sub-class-content"><div class="recommend-class"></div><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=391.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=391">钟表</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=392.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=392">手表</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=508.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=508">时尚配饰</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=509.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=509">项链</a><a href="index.php-act=search&op=index&cate_id=510.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=510">手链/脚链</a><a href="index.php-act=search&op=index&cate_id=511.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=511">发饰</a><a href="index.php-act=search&op=index&cate_id=512.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=512">胸针</a></dd></dl></div><div class="sub-class-right"><div class="adv-promotions"></div></div></div></li><li cat_id="433" class="odd" ><div class="class"><h4><a href=" index.php-act=search&op=index&cate_id=433.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=433">生鲜冻品</a></h4><span class="arrow"></span> </div><div class="sub-class" cat_menu_id="433"><div class="sub-class-content"><div class="recommend-class"></div><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=434.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=434">水果蔬菜</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=491.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=491">苹果/梨</a><a href="index.php-act=search&op=index&cate_id=513.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=513">奇异果</a><a href="index.php-act=search&op=index&cate_id=438.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=438">芒果</a><a href="index.php-act=search&op=index&cate_id=443.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=443">时令水果</a><a href="index.php-act=search&op=index&cate_id=492.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=492">柚子</a><a href="index.php-act=search&op=index&cate_id=468.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=468">根茎类</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=435.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=435">海鲜水产</a></h3></dt><dd class="goods-class"><a href="index.php-act=search&op=index&cate_id=459.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=459">蟹类</a></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=436.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=436">肉类</a></h3></dt><dd class="goods-class"></dd></dl><dl><dt><h3><a href="index.php-act=search&op=index&cate_id=437.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=437">冷冻食饮</a></h3></dt><dd class="goods-class"></dd></dl></div><div class="sub-class-right"><div class="adv-promotions"></div></div></div></li></ul></div>    </div>    <ul class="site-menu">      <li><a href="javascript:if(confirm(%27http://meipin365.cn/mall/  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/%27" tppabs="http://meipin365.cn/mall" ><span>首页</span></a></li>            <!--<li class="navitems-on"><a href="http://meipin365.cn/mall/index.php?act=show_groupbuy&op=index" > <span>特卖00000</span></a></li>-->            <!--<li><a href="http://meipin365.cn/mall/index.php?act=brand&op=index" > <span>品牌</span></a></li>-->      <!--<li><a href="http://meipin365.cn/mall/index.php?act=promotion&op=index" > <span>疯555抢</span></a></li>-->                               <li><a         target="_blank" href="/mall/index.php?act=search&amp;op=index&amp;cate_id=2">大家电</a></li>                        <li><a         target="_blank" href="/mall/index.php?act=search&amp;op=index&amp;cate_id=12">生活电器</a></li>                        <li><a         target="_blank" href="/mall/index.php?act=search&amp;op=index&amp;cate_id=25">厨房电器</a></li>                                                                        <li><a         target="_blank" href="http://meipin365.cn/mall/index.php?act=search&amp;op=index&amp;cate_id=13">空气净化</a></li>                            </ul>  </div></nav><div class="nch-breadcrumb-layout">
+  
+  <div class="nch-breadcrumb wrapper"><i class="icon-home"></i>
+    
+    
+    <span><a href="javascript:if(confirm(%27http://meipin365.cn/mall/  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/%27" tppabs="http://meipin365.cn/mall">首页</a></span><span class="arrow">></span>
+    
+    
+    
+    <span><a href="index.php-act=search&op=index&cate_id=379.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=379">个护化妆</a></span><span class="arrow">></span>
+    
+    
+    
+    <span><a href="index.php-act=search&op=index&cate_id=395.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=395">口腔护理</a></span><span class="arrow">></span>
+    
+    
+    
+    <span>牙膏/牙粉</span>
+    
+    
+  </div>
+  
+</div>
+
+<script src="resource/js/search_goods.js" tppabs="http://meipin365.cn/mall/resource/js/search_goods.js"></script>
+
+<link href="templates/default/css/wwi-main.css" tppabs="http://meipin365.cn/mall/templates/default/css/wwi-main.css" rel="stylesheet" type="text/css">
+
+<link href="templates/default/css/layout.css" tppabs="http://meipin365.cn/mall/templates/default/css/layout.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+
+body { _behavior: url(templates/default/css/csshover.htc)/*tpa=http://meipin365.cn/mall/templates/default/css/csshover.htc*/;
+
+}
+
+</style>
+<div class="wwi-container wrapper" >
+<script type="text/javascript" src="index.php-act=adv&op=advshow&ap_id=40.js" tppabs="http://meipin365.cn/mall/index.php?act=adv&op=advshow&ap_id=40"></script>
+
+    <div class="wwi-module wwi-padding25">
+
+      <div class="title" style="border-bottom: 1px solid #eee;">
+
+        <h3>
+
+          
+          <em>牙膏/牙粉</em>
+
+          
+          &nbsp;&nbsp;&nbsp;&nbsp;搜索到<b>4</b>件相关商品</h3>
+
+      </div>
+
+      
+      <div class="wwi-slide-pp clearfix">
+
+        <ul id="files" class="tree clearfix">
+
+          
+          <li><i class="tree-parent tree-parent-collapsed wwi-slidenone"></i><div class="wwi-slidenone"><a href="index.php-act=search&op=index&cate_id=379.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=379" >个护化妆</a></div>
+
+            
+            <ul class="wwi-two clearfix">
+
+              
+              <li><i class="tree-parent tree-parent-collapsed"></i><div class="wwi-slideone"><a href="index.php-act=search&op=index&cate_id=395.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=395" >口腔护理</a></div>
+
+                
+                <ul class="wwi-three">
+
+                  
+                  <li class="tree-parent tree-parent-collapsed"><i></i><a href="index.php-act=search&op=index&cate_id=405.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405" class="selected">牙膏/牙粉</a></li>
+
+                  
+                  <li class="tree-parent tree-parent-collapsed"><i></i><a href="index.php-act=search&op=index&cate_id=406.htm" tppabs="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=406" >漱口水</a></li>
+
+                  
+                </ul>
+
+                
+              </li>
+
+              
+            </ul>
+
+            
+          </li>
+
+          
+        </ul>
+
+      </div>
+
+    
+
+
+	  
+    </div>
+
+    <!-- 分类下的推荐商品 -->
+
+    <div class="shop_con_list" id="main-nav-holder">
+
+      <nav class="sort-bar" id="main-nav">
+
+        <div class="pagination"><ul><li><span><</span></li><li><span>></span></li></ul> </div>
+
+        <div class="sortbar-array">
+
+          <ul>
+
+            <li class="selected"><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&order=0&key=0"  title="默认排序">默认</a></li>
+
+            <li ><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&key=1&order=2"  title="点击按销量从高到低排序">销量<i></i></a></li>
+
+            <li ><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&key=2&order=2"  title="点击按人气从高到低排序">人气<i></i></a></li>
+
+            <li ><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&key=3&order=2"  title="点击按价格从高到低排序">价格<i></i></a></li>
+
+          </ul>
+
+        </div>
+
+        <div class="sortbar-filter" nc_type="more-filter">
+
+        <span class="arrow"></span>
+
+          <ul>
+
+            <li><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&type=1" ><i></i>平台自营</a></li>
+
+            <li><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&gift=1" ><i></i>赠品</a></li>
+
+            <!-- 消费者保障服务 -->
+
+            
+          </ul>
+
+        </div>
+
+        <div class="sortbar-location">商品所在地：
+
+          <div class="select-layer">
+
+            <div class="holder"><em nc_type="area_name">不限地区<!-- 所在地 --></em></div>
+
+            <div class="selected"><a nc_type="area_name">不限地区<!-- 所在地 --></a></div>
+
+            <i class="direction"></i>
+
+            <ul class="options">
+
+              
+<div class="filter-detailc" id="addressDraw">
+  <dl class="location-hots">
+    <dt>常用地区</dt>
+    <dd><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=1"></a></dd>
+	<dd><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=2"></a></dd>
+    <dd><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=9"></a></dd>
+    <dd><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=35"></a></dd>
+  </dl>
+  <dl class="location-all">
+    <dt>省份</dt>
+    <dd>
+      <ul>
+        <li>
+          <p class="lt">A</p>
+          <p class="lc"> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=12"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=34"></a></span> </p>
+        </li>
+        <li>
+          <p class="lt">C</p>
+          <p class="lc"> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=22"></a></span> </p>
+        </li>
+        <li>
+          <p class="lt">F</p>
+          <p class="lc"> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=13"></a></span> </p>
+        </li>
+        <li>
+          <p class="lt">G</p>
+          <p class="lc"> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=19"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=28"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=20"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=24"></a></span> </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p class="lt">H</p>
+          <p class="lc"> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=21"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=3"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=16">河南</a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=8"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=17"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=18"></a></span> </p>
+        </li>
+        <li>
+          <p class="lt">J</p>
+          <p class="lc"> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=10"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=14"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=7"></a></span> </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p class="lt">N</p>
+          <p class="lc"> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=6"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=5"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=30"></a></span> </p>
+        </li>
+        <li>
+          <p class="lt">Q</p>
+          <p class="lc"> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=29"></a></span> </p>
+        </li>
+        <li>
+          <p class="lt">S</p>
+          <p class="lc"> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=15"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=4"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=27"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=23"></a></span> </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p class="lt">T</p>
+          <p class="lc"> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=32"></a></span> </p>
+        </li>
+        <li>
+          <p class="lt">X</p>
+          <p class="lc"> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=26"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=31"></a></span> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=33"></a></span> </p>
+        </li>
+        <li>
+          <p class="lt">Y</p>
+          <p class="lc"> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=25"></a></span> </p>
+        </li>
+        <li>
+          <p class="lt">Z</p>
+          <p class="lc"> <span><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=11"></a></span> </p>
+        </li>
+      </ul>
+    </dd>
+  </dl>
+  <p class="oreder-default"><a href="http://meipin365.cn/mall/index.php?act=search&op=index&cate_id=405&area_id=0">不限地区</a></p>
+</div>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+      <!-- 商品列表循环  -->
+
+      <div>
+
+      <style type="text/css">
+#box { background: #FFF; width: 238px; height: 410px; margin: -390px 0 0 0; display: block; border: solid 4px #D93600; position: absolute; z-index: 999; opacity: .5 }
+.shopMenu { position: fixed; z-index: 1; right: 25%; top: 0; }
+</style>
+<div class="squares" nc_type="current_display_mode">
+  <input type="hidden" id="lockcompare" value="unlock" />
+    <ul class="list_pic">
+        <li class="item">
+      <div class="goods-content" nctype_goods=" 102884" nctype_store="60">
+        <div class="goods-pic"><a href="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102884" target="_blank" title="爱茉莉MEDIAN麦迪安86韩国专业美白去牙垢牙膏3支	120g*3"><img shopwwi-url="http://img.meipin365.cn/data/upload/mall/store/goods/60/2016/07/07/60_05212296390972378_360.jpg"   rel='lazy' src="img/loading.gif" tppabs="http://meipin365.cn/mall/img/loading.gif"  title="爱茉莉MEDIAN麦迪安86韩国专业美白去牙垢牙膏3支	120g*3" alt="爱茉莉MEDIAN麦迪安86韩国专业美白去牙垢牙膏3支	120g*3" /></a></div>
+                          <div class="goods-sub">
+                                                                        <span class="goods-compare" nc_type="compare_102884" data-param='{"gid":"102884"}'><i></i>加入对比</span> </div>
+		        <div class="goods-info clearfix">
+                   <div class="goods-price"> <em class="sale-price" title="商城价：&yen;59.00"><i>¥ </i>59.00</em> <em class="market-price" title="市场价：&yen;78.00">&yen;78.00</em>
+                        <!--<span class="raty" data-score="5"></span>--> </div>
+          <div class="goods-name"><a href="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102884" target="_blank" title="">爱茉莉MEDIAN麦迪安86韩国专业美白去牙垢牙膏3支	120g*3<em></em></a></div>
+           <div class="goodsinfo clearfix">
+               <a href="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102884#ncGoodsRate" target="_blank" class="goods-num" style="padding-left:5px;font-weight:200;color:#CCA881">销量:0</a>
+<!--               <a href="http://meipin365.cn/mall/index.php?act=goods&op=comments_list&goods_id=102884" target="_blank" class="goods-num"><em class="wwi-icon"></em>0</a>-->
+               <a href="http://meipin365.cn/mall/index.php?act=show_store&op=index&store_id=60" title="河南粤鸿和" class="seller-name"><em class="wwi-icon"></em>河南粤鸿和&nbsp;</a></div>
+           <div class="add-cart">
+                                    <a href="javascript:void(0);" nctype="add_cart" class="ct" data-gid="102884"><i class="icon-shopping-cart"></i>加入购物车</a>
+                                    <em member_id="282367">&nbsp;</em>
+          </div>
+          
+        </div>
+      </div>
+    </li>
+        <li class="item">
+      <div class="goods-content" nctype_goods=" 102883" nctype_store="60">
+        <div class="goods-pic"><a href="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102883" target="_blank" title="爱茉莉MEDIAN麦迪安86韩国专业牙膏极致抗菌美白3支	120g*3"><img shopwwi-url="http://img.meipin365.cn/data/upload/mall/store/goods/60/2016/07/07/60_05212295352253399_360.jpg"   rel='lazy' src="img/loading.gif" tppabs="http://meipin365.cn/mall/img/loading.gif"  title="爱茉莉MEDIAN麦迪安86韩国专业牙膏极致抗菌美白3支	120g*3" alt="爱茉莉MEDIAN麦迪安86韩国专业牙膏极致抗菌美白3支	120g*3" /></a></div>
+                          <div class="goods-sub">
+                                                                        <span class="goods-compare" nc_type="compare_102883" data-param='{"gid":"102883"}'><i></i>加入对比</span> </div>
+		        <div class="goods-info clearfix">
+                   <div class="goods-price"> <em class="sale-price" title="商城价：&yen;59.00"><i>¥ </i>59.00</em> <em class="market-price" title="市场价：&yen;78.00">&yen;78.00</em>
+                        <!--<span class="raty" data-score="5"></span>--> </div>
+          <div class="goods-name"><a href="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102883" target="_blank" title="">爱茉莉MEDIAN麦迪安86韩国专业牙膏极致抗菌美白3支	120g*3<em></em></a></div>
+           <div class="goodsinfo clearfix">
+               <a href="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102883#ncGoodsRate" target="_blank" class="goods-num" style="padding-left:5px;font-weight:200;color:#CCA881">销量:4</a>
+<!--               <a href="http://meipin365.cn/mall/index.php?act=goods&op=comments_list&goods_id=102883" target="_blank" class="goods-num"><em class="wwi-icon"></em>0</a>-->
+               <a href="http://meipin365.cn/mall/index.php?act=show_store&op=index&store_id=60" title="河南粤鸿和" class="seller-name"><em class="wwi-icon"></em>河南粤鸿和&nbsp;</a></div>
+           <div class="add-cart">
+                                    <a href="javascript:void(0);" nctype="add_cart" class="ct" data-gid="102883"><i class="icon-shopping-cart"></i>加入购物车</a>
+                                    <em member_id="282367">&nbsp;</em>
+          </div>
+          
+        </div>
+      </div>
+    </li>
+        <li class="item">
+      <div class="goods-content" nctype_goods=" 101628" nctype_store="37">
+        <div class="goods-pic"><a href="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=101628" target="_blank" title="日本狮王LION CLINICA酵素洁净牙膏(清新薄荷) 130g"><img shopwwi-url="http://img.meipin365.cn/data/upload/mall/store/goods/37/2016/05/27/37_05176880106969314_360.jpg"   rel='lazy' src="img/loading.gif" tppabs="http://meipin365.cn/mall/img/loading.gif"  title="日本狮王LION CLINICA酵素洁净牙膏(清新薄荷) 130g" alt="日本狮王LION CLINICA酵素洁净牙膏(清新薄荷) 130g" /></a></div>
+                          <div class="goods-sub">
+                                                                        <span class="goods-compare" nc_type="compare_101628" data-param='{"gid":"101628"}'><i></i>加入对比</span> </div>
+		        <div class="goods-info clearfix">
+                   <div class="goods-price"> <em class="sale-price" title="商城价：&yen;35.00"><i>¥ </i>35.00</em> <em class="market-price" title="市场价：&yen;42.00">&yen;42.00</em>
+                        <!--<span class="raty" data-score="5"></span>--> </div>
+          <div class="goods-name"><a href="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=101628" target="_blank" title="独特 酵素成分 分解牙垢 强化牙质 美白牙齿">日本狮王LION CLINICA酵素洁净牙膏(清新薄荷) 130g<em>独特 酵素成分 分解牙垢 强化牙质 美白牙齿</em></a></div>
+           <div class="goodsinfo clearfix">
+               <a href="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=101628#ncGoodsRate" target="_blank" class="goods-num" style="padding-left:5px;font-weight:200;color:#CCA881">销量:0</a>
+<!--               <a href="http://meipin365.cn/mall/index.php?act=goods&op=comments_list&goods_id=101628" target="_blank" class="goods-num"><em class="wwi-icon"></em>0</a>-->
+               <a href="http://meipin365.cn/mall/index.php?act=show_store&op=index&store_id=37" title="郑州环球货栈" class="seller-name"><em class="wwi-icon"></em>郑州环球货栈&nbsp;</a></div>
+           <div class="add-cart">
+                                    <a href="javascript:void(0);" nctype="add_cart" class="ct" data-gid="101628"><i class="icon-shopping-cart"></i>加入购物车</a>
+                                    <em member_id="248406">&nbsp;</em>
+          </div>
+          
+        </div>
+      </div>
+    </li>
+        <li class="item">
+      <div class="goods-content" nctype_goods=" 101627" nctype_store="37">
+        <div class="goods-pic"><a href="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=101627" target="_blank" title="日本狮王LION CLINICA酵素洁净立式牙膏(清新薄荷) 130g"><img shopwwi-url="http://img.meipin365.cn/data/upload/mall/store/goods/37/2016/05/27/37_05176879004731712_360.jpg"   rel='lazy' src="img/loading.gif" tppabs="http://meipin365.cn/mall/img/loading.gif"  title="日本狮王LION CLINICA酵素洁净立式牙膏(清新薄荷) 130g" alt="日本狮王LION CLINICA酵素洁净立式牙膏(清新薄荷) 130g" /></a></div>
+                          <div class="goods-sub">
+                                                                        <span class="goods-compare" nc_type="compare_101627" data-param='{"gid":"101627"}'><i></i>加入对比</span> </div>
+		        <div class="goods-info clearfix">
+                   <div class="goods-price"> <em class="sale-price" title="商城价：&yen;35.00"><i>¥ </i>35.00</em> <em class="market-price" title="市场价：&yen;42.00">&yen;42.00</em>
+                        <!--<span class="raty" data-score="5"></span>--> </div>
+          <div class="goods-name"><a href="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=101627" target="_blank" title="">日本狮王LION CLINICA酵素洁净立式牙膏(清新薄荷) 130g<em></em></a></div>
+           <div class="goodsinfo clearfix">
+               <a href="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=101627#ncGoodsRate" target="_blank" class="goods-num" style="padding-left:5px;font-weight:200;color:#CCA881">销量:0</a>
+<!--               <a href="http://meipin365.cn/mall/index.php?act=goods&op=comments_list&goods_id=101627" target="_blank" class="goods-num"><em class="wwi-icon"></em>0</a>-->
+               <a href="http://meipin365.cn/mall/index.php?act=show_store&op=index&store_id=37" title="郑州环球货栈" class="seller-name"><em class="wwi-icon"></em>郑州环球货栈&nbsp;</a></div>
+           <div class="add-cart">
+                                    <a href="javascript:void(0);" nctype="add_cart" class="ct" data-gid="101627"><i class="icon-shopping-cart"></i>加入购物车</a>
+                                    <em member_id="248406">&nbsp;</em>
+          </div>
+          
+        </div>
+      </div>
+    </li>
+        <div class="clear"></div>
+  </ul>
+  </div>
+<form id="buynow_form" method="post" action="http://meipin365.cn/mall/index.php" target="_blank">
+  <input id="act" name="act" type="hidden" value="buy" />
+  <input id="op" name="op" type="hidden" value="buy_step1" />
+  <input id="goods_id" name="cart_id[]" type="hidden"/>
+</form>
+<script type="text/javascript" src="../data/resource/js/jquery.raty/jquery.raty.min.js" tppabs="http://meipin365.cn/data/resource/js/jquery.raty/jquery.raty.min.js"></script> 
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.raty').raty({
+            path: "http://meipin365.cn/data/resource/js/jquery.raty/img",
+            readOnly: true,
+            width: 80,
+            score: function() {
+              return $(this).attr('data-score');
+            }
+        });
+      	//初始化对比按钮
+    	initCompare();
+    });
+</script> 
+
+      </div>
+
+      <div class="tc mt20 mb20">
+
+        <div class="pagination"> <ul><li><span>首页</span></li><li><span>上一页</span></li><li><span class="currentpage">1</span></li><li><span>下一页</span></li><li><span>末页</span></li></ul> </div>
+
+      </div>
+
+    </div>
+
+  <div class="clear"></div>
+
+
+
+  
+  <div class="s3-module">
+
+  <div class="title">
+
+<h3><b>牙膏/牙粉</b>分类下最热销的商品</h3></div>
+
+<div class="content" nc_type="current_display_mode">
+
+
+
+  <ul class="wwi-booth-list">
+
+    
+    <li nctype_goods="102412" nctype_store="4">
+
+        <div class="goods-pic"><a href="javascript:if(confirm(%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102412  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102412%27" tppabs="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102412" target="_blank" title="格力空调 品圆KFR-35GW/(35592)FNhDa-A3 变频 冷暖 1.5匹机 挂壁式空调"><img src="../../img.meipin365.cn/data/upload/mall/store/goods/4/2016/05/17/4_05167944335690372_240.jpg" tppabs="http://img.meipin365.cn/data/upload/mall/store/goods/4/2016/05/17/4_05167944335690372_240.jpg" title="格力空调 品圆KFR-35GW/(35592)FNhDa-A3 变频 冷暖 1.5匹机 挂壁式空调" alt="格力空调 品圆KFR-35GW/(35592)FNhDa-A3 变频 冷暖 1.5匹机 挂壁式空调" /></a> </div>
+
+        
+          <div class="goods-name"><a href="javascript:if(confirm(%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102412  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102412%27" tppabs="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102412" target="_blank" title="白色机身，蓝色装饰条，简约时尚，适合各种家居风格；节能专家智控系统，全状态节能运行。噪音低至19分贝，营造宁静空间。
+16-24平方米适用">格力空调 品圆KFR-35GW/(35592)FNhDa-A3 变频 冷暖 1.5匹机 挂壁式空调</a></div>
+
+          <div class="goods-price" title="商品价格：&yen;3299.00">&yen;3299.00<em class="market-price" title="市场价：&yen;3799.00">&yen;3799.00</em></div>
+
+    </li>
+
+    
+    <li nctype_goods="102413" nctype_store="4">
+
+        <div class="goods-pic"><a href="javascript:if(confirm(%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102413  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102413%27" tppabs="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102413" target="_blank" title="格力空调 品圆KFR-32GW/(32592)FNhDa-A3 变频 冷暖 小1.5匹机 挂壁式空调"><img src="../../img.meipin365.cn/data/upload/mall/store/goods/4/2016/05/17/4_05167942576456438_240.jpg" tppabs="http://img.meipin365.cn/data/upload/mall/store/goods/4/2016/05/17/4_05167942576456438_240.jpg" title="格力空调 品圆KFR-32GW/(32592)FNhDa-A3 变频 冷暖 小1.5匹机 挂壁式空调" alt="格力空调 品圆KFR-32GW/(32592)FNhDa-A3 变频 冷暖 小1.5匹机 挂壁式空调" /></a> </div>
+
+        
+          <div class="goods-name"><a href="javascript:if(confirm(%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102413  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102413%27" tppabs="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102413" target="_blank" title="白色机身，蓝色装饰条，简约时尚，适合各种家居风格；节能专家智控系统，全状态节能运行。噪音低至19分贝，营造宁静空间。
+15-22平方米适用">格力空调 品圆KFR-32GW/(32592)FNhDa-A3 变频 冷暖 小1.5匹机 挂壁式空调</a></div>
+
+          <div class="goods-price" title="商品价格：&yen;3099.00">&yen;3099.00<em class="market-price" title="市场价：&yen;3599.00">&yen;3599.00</em></div>
+
+    </li>
+
+    
+    <li nctype_goods="105461" nctype_store="86">
+
+        <div class="goods-pic"><a href="javascript:if(confirm(%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=105461  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=105461%27" tppabs="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=105461" target="_blank" title="【好客山里郎】袋装蜂蜜  12支/盒"><img src="../../img.meipin365.cn/data/upload/mall/store/goods/86/2016/08/31/86_05259661335126516_240.jpg" tppabs="http://img.meipin365.cn/data/upload/mall/store/goods/86/2016/08/31/86_05259661335126516_240.jpg" title="【好客山里郎】袋装蜂蜜  12支/盒" alt="【好客山里郎】袋装蜂蜜  12支/盒" /></a> </div>
+
+        
+          <div class="goods-name"><a href="javascript:if(confirm(%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=105461  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=105461%27" tppabs="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=105461" target="_blank" title="携带方便，食用方便">【好客山里郎】袋装蜂蜜  12支/盒</a></div>
+
+          <div class="goods-price" title="商品价格：&yen;19.90">&yen;19.90<em class="market-price" title="市场价：&yen;29.90">&yen;29.90</em></div>
+
+    </li>
+
+    
+    <li nctype_goods="102414" nctype_store="4">
+
+        <div class="goods-pic"><a href="javascript:if(confirm(%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102414  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102414%27" tppabs="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102414" target="_blank" title="格力空调 品圆KFR-26GW/(26592)FNhDa-A3 变频 冷暖 1匹机 挂壁式空调"><img src="../../img.meipin365.cn/data/upload/mall/store/goods/4/2016/05/17/4_05167940957394772_240.jpg" tppabs="http://img.meipin365.cn/data/upload/mall/store/goods/4/2016/05/17/4_05167940957394772_240.jpg" title="格力空调 品圆KFR-26GW/(26592)FNhDa-A3 变频 冷暖 1匹机 挂壁式空调" alt="格力空调 品圆KFR-26GW/(26592)FNhDa-A3 变频 冷暖 1匹机 挂壁式空调" /></a> </div>
+
+        
+          <div class="goods-name"><a href="javascript:if(confirm(%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102414  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102414%27" tppabs="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=102414" target="_blank" title="白色机身，蓝色装饰条，简约时尚，适合各种家居风格；节能专家智控系统，全状态节能运行。噪音低至19分贝，营造宁静空间。12-18平方米适用">格力空调 品圆KFR-26GW/(26592)FNhDa-A3 变频 冷暖 1匹机 挂壁式空调</a></div>
+
+          <div class="goods-price" title="商品价格：&yen;2899.00">&yen;2899.00<em class="market-price" title="市场价：&yen;3399.00">&yen;3399.00</em></div>
+
+    </li>
+
+    
+    <li nctype_goods="107742" nctype_store="127">
+
+        <div class="goods-pic"><a href="javascript:if(confirm(%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=107742  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=107742%27" tppabs="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=107742" target="_blank" title="碧素堂蜗牛精华美白面膜 补水美白保湿面部护肤品一片装"><img src="../../img.meipin365.cn/data/upload/mall/store/goods/127/2016/10/22/127_05304856578450204_240.jpg" tppabs="http://img.meipin365.cn/data/upload/mall/store/goods/127/2016/10/22/127_05304856578450204_240.jpg" title="碧素堂蜗牛精华美白面膜 补水美白保湿面部护肤品一片装" alt="碧素堂蜗牛精华美白面膜 补水美白保湿面部护肤品一片装" /></a> </div>
+
+        
+          <div class="goods-name"><a href="javascript:if(confirm(%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=107742  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=107742%27" tppabs="http://meipin365.cn/mall/index.php?act=goods&op=index&goods_id=107742" target="_blank" title="商品不进行单独配送，需到门店进行领取，联系方式详见后台支付成功后提醒的消息">碧素堂蜗牛精华美白面膜 补水美白保湿面部护肤品一片装</a></div>
+
+          <div class="goods-price" title="商品价格：&yen;6.90">&yen;6.90<em class="market-price" title="市场价：&yen;9.90">&yen;9.90</em></div>
+
+    </li>
+
+    
+  </ul>
+
+
+
+</div></div>
+<div id="gc_goods_recommend_div" ></div>
+
+ <!-- E 推荐展位 -->
+
+<!-- <div class="wwi-module"><a href='' title='商品列表页左侧广告位'><img style='width:206px;height:300px' border='0' src='http://img.meipin365.cn/data/upload/mall/adv/' alt=''/></a></div> -->
+
+
+
+        <!-- S 推荐展位 -->
+
+    <div nctype="booth_goods" class="s3-module" style="display:none;"> </div>
+
+
+
+<!-- 猜你喜欢 --><div id="guesslike_div" style="width:1200px;display: none; "></div>  <!-- 最近浏览 --></div></div>
+
+<script src="../data/resource/js/waypoints.js" tppabs="http://meipin365.cn/data/resource/js/waypoints.js"></script>
+
+<script src="resource/js/search_category_menu.js" tppabs="http://meipin365.cn/mall/resource/js/search_category_menu.js"></script>
+
+<script type="text/javascript" src="../data/resource/js/fly/jquery.fly.min.js" tppabs="http://meipin365.cn/data/resource/js/fly/jquery.fly.min.js" charset="utf-8"></script>
+
+<!--[if lt IE 10]>
+
+<script type="text/javascript" src="../data/resource/js/fly/requestAnimationFrame.js" tppabs="http://meipin365.cn/data/resource/js/fly/requestAnimationFrame.js" charset="utf-8"></script>
+
+<![endif]-->
+
+<script type="text/javascript">
+
+var defaultSmallGoodsImage = 'mall/common/default_goods_image_240.gif';
+
+var defaultTinyGoodsImage = 'mall/common/default_goods_image_60.gif';
+
+
+
+$(function(){
+
+    $('#files').tree({
+
+        expanded: 'li:lt(2)'
+
+    });
+
+	//品牌索引过长滚条
+
+	$('#ncBrandlist').perfectScrollbar({suppressScrollX:true});
+
+    //浮动导航  waypoints.js
+
+    $('#main-nav-holder').waypoint(function(event, direction) {
+
+        $(this).parent().toggleClass('sticky', direction === "down");
+
+        event.stopPropagation();
+
+    });
+
+	// 单行显示更多
+
+	$('span[nc_type="show"]').click(function(){
+
+		s = $(this).parents('dd').prev().find('li[nc_type="none"]');
+
+		if(s.css('display') == 'none'){
+
+			s.show();
+
+			$(this).html('<i class="icon-angle-up"></i>收起');
+
+		}else{
+
+			s.hide();
+
+			$(this).html('<i class="icon-angle-down"></i>更多');
+
+		}
+
+	});
+
+
+
+	
+
+
+	
+	// 推荐商品异步显示
+
+    $('div[nctype="booth_goods"]').load('http://meipin365.cn/mall/index.php?act=search&op=get_booth_goods&cate_id=405', function(){
+
+        $(this).show();
+
+    });
+
+	
+	//浏览历史处滚条
+
+	$('#wwiSidebarViewed').perfectScrollbar({suppressScrollY:true});
+
+
+
+	//猜你喜欢
+
+	$('#guesslike_div').load('http://meipin365.cn/mall/index.php?act=search&op=get_guesslike', function(){
+
+        $(this).show();
+
+    });
+
+
+
+	//商品分类推荐
+
+	$('#gc_goods_recommend_div').load('http://meipin365.cn/mall/index.php?act=search&op=get_gc_goods_recommend&cate_id=405');
+
+});
+
+</script>
+
+<link href="/qqkf/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/qqkf/js/lrtk.js"></script>
+
+                        <!-- 代码 开始 -->
+<div class="main-im">
+    <div id="open_im" class="open-im">&nbsp;</div>
+    <div class="im_main" id="im_main">
+        <div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>
+        <a href="javascript:if(confirm(%27http://wpa.qq.com/msgrd?v=3&uin=2838346245&site=qq&menu=yes  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://wpa.qq.com/msgrd?v=3&uin=2838346245&site=qq&menu=yes%27" tppabs="http://wpa.qq.com/msgrd?v=3&uin=2838346245&site=qq&menu=yes" target="_blank" class="im-qq qq-a" title="在线QQ客服">
+            <div class="qq-container"></div>
+            <div class="qq-hover-c"><img class="img-qq" src="/qqkf/images/qq.png"></div>
+            <span> QQ在线咨询</span>
+        </a>
+        <div class="im-tel">
+            <div>咨询热线</div>
+            <div class="tel-num">400-612-3315</div>
+        </div>
+        <div class="im-footer" style="position:relative">
+            <div class="weixing-container">
+                <div class="weixing-show">
+                    <div class="weixing-txt">微信扫一扫<br>关注美品商城</div>
+                    <img class="weixing-ma" src="/qqkf/images/meipinshop_winxin.jpg">
+                    <div class="weixing-sanjiao"></div>
+                    <div class="weixing-sanjiao-big"></div>
+                </div>
+            </div>
+            <div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+</div>
+<!-- 代码 结束 -->
+
+
+
+<script language="javascript">
+
+    function fade() {
+
+        $("img[rel='lazy']").each(function () {
+
+            var $scroTop = $(this).offset();
+
+            if ($scroTop.top <= $(window).scrollTop() + $(window).height()) {
+
+                $(this).hide();
+
+                $(this).attr("src", $(this).attr("shopwwi-url"));
+
+                $(this).removeAttr("rel");
+
+                $(this).removeAttr("name");
+
+                $(this).fadeIn(500);
+
+            }
+
+        });
+
+    }
+
+
+
+    if ($("img[rel='lazy']").length > 0) {
+
+        $(window).scroll(function () {
+
+            fade();
+
+        });
+
+    }
+
+    ;
+
+    fade();
+
+</script>					<link href="../chat/templates/default/css/chat.css" tppabs="http://meipin365.cn/chat/templates/default/css/chat.css" rel="stylesheet" type="text/css">
+					<div style="clear: both;"></div>
+					<div id="web_chat_dialog" style="display: none;float:right;">
+					</div>
+					<a id="chat_login" href="javascript:void(0)" style="display: none;"></a>
+					<script type="text/javascript">
+					var LOGIN_SITE_URL = 'http://meipin365.cn/member/';
+					var CHAT_SITE_URL = 'http://meipin365.cn/chat';
+					var SHOP_SITE_URL = 'http://meipin365.cn/mall/';
+					var connect_url = "http://114.55.65.111:8090/";
+
+					var layout = "layout/home_layout.php";
+					var act_op = "search_index";
+					var chat_goods_id = "";
+					var user = {};
+
+					user['u_id'] = "";
+					user['u_name'] = "";
+					user['s_id'] = "";
+					user['s_name'] = "";
+					user['s_avatar'] = "../../img.meipin365.cn/data/upload/mall/common/default_store_avatar.gif"/*tpa=http://img.meipin365.cn/data/upload/mall/common/default_store_avatar.gif*/;
+					user['avatar'] = "../../img.meipin365.cn/data/upload/mall/common/default_user_portrait.gif"/*tpa=http://img.meipin365.cn/data/upload/mall/common/default_user_portrait.gif*/;
+
+					$("#chat_login").nc_login({
+					  action:'/index.php?act=login',
+					  nchash:'5b92ff0b',
+					  formhash:'inR3hIwRMMHHfJPkO1OnZw4NXtxizUI'
+					});
+					</script><link href="../data/resource/js/perfect-scrollbar.min.css" tppabs="http://meipin365.cn/data/resource/js/perfect-scrollbar.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="../data/resource/js/perfect-scrollbar.min.js" tppabs="http://meipin365.cn/data/resource/js/perfect-scrollbar.min.js"></script><script type="text/javascript" src="../data/resource/js/jquery.mousewheel.js" tppabs="http://meipin365.cn/data/resource/js/jquery.mousewheel.js"></script><script type="text/javascript" src="../data/resource/js/jquery.charCount.js" tppabs="http://meipin365.cn/data/resource/js/jquery.charCount.js" charset="utf-8"></script><script type="text/javascript" src="../data/resource/js/jquery.smilies.js" tppabs="http://meipin365.cn/data/resource/js/jquery.smilies.js" charset="utf-8"></script><script type="text/javascript" src="../chat/resource/js/user.js" tppabs="http://meipin365.cn/chat/resource/js/user.js" charset="utf-8"></script>
+<div class="wwi-footer"><div id="cti" class="wrapper"><ul><li> <span class="icon"> <img style="width: 60px;" src="../../img.meipin365.cn/data/upload/mall/contracticon/7day_60.gif" tppabs="http://img.meipin365.cn/data/upload/mall/contracticon/7day_60.gif" /> </span> <span class="name"> 7天退货 </span> </li><li> <span class="icon"> <img style="width: 60px;" src="../../img.meipin365.cn/data/upload/mall/contracticon/pz_60.gif" tppabs="http://img.meipin365.cn/data/upload/mall/contracticon/pz_60.gif" /> </span> <span class="name"> 品质承诺 </span> </li><li> <span class="icon"> <img style="width: 60px;" src="../../img.meipin365.cn/data/upload/mall/contracticon/psbf_60.gif" tppabs="http://img.meipin365.cn/data/upload/mall/contracticon/psbf_60.gif" /> </span> <span class="name"> 破损补寄 </span> </li><li> <span class="icon"> <img style="width: 60px;" src="../../img.meipin365.cn/data/upload/mall/contracticon/jswl_60.gif" tppabs="http://img.meipin365.cn/data/upload/mall/contracticon/jswl_60.gif" /> </span> <span class="name"> 急速物流 </span> </li><li class="rf">客服电话：<em class="red">400-612-3315</em>  <em class="rgb9">08:30-17:30(周一至周六) QQ客服7X24小时</em></li></ul></div><div id="faq"><div class="wrapper"><ul><li><dl class="s1"><dt>新手指南</dt><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=6  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=6%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=6" title="会员注册"> 会员注册 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=7  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=7%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=7" title="购物流程"> 购物流程 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=8  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=8%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=8" title="订单查询"> 订单查询 </a></dd></dl></li><li><dl class="s2"><dt>支付方式</dt><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=17  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=17%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=17" title="在线支付"> 在线支付 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=28  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=28%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=28" title="平台支付"> 平台支付 </a></dd></dl></li><li><dl class="s3"><dt>配送方式</dt><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=45  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=45%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=45" title="包邮政策"> 包邮政策 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=44  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=44%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=44" title="配送时效"> 配送时效 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=43  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=43%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=43" title="物流查询"> 物流查询 </a></dd></dl></li><li><dl class="s4"><dt>售后服务</dt><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=31  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=31%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=31" title="物流及售后政策"> 物流及售后政策 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=32  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=32%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=32" title="退换货流程"> 退换货流程 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=34  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=34%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=34" title="上门安装"> 上门安装 </a></dd></dl></li><li><dl class="s5"><dt>常见问题</dt><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=9  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=9%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=9" title="发票制度"> 发票制度 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=21  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=21%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=21" title="取消订单"> 取消订单 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=20  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=20%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=20" title="联系商家"> 联系商家 </a></dd></dl></li><li><dl class="s6"><dt>关于我们</dt><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=22  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=22%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=22" title="了解我们"> 了解我们 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=25  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=25%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=25" title="合作洽谈"> 合作洽谈 </a></dd><dd><a href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=24  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=show&article_id=24%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=show&article_id=24" title="招聘英才"> 招聘英才 </a></dd></dl></li><li class="cooperation"><dl><dt>商家合作</dt><dd><p>错过天猫？别再错过我们！</p><p>美品商城开启全新旅程！</p><a href="index.php-act=show_joinin&op=index.htm" tppabs="http://meipin365.cn/mall/index.php?act=show_joinin&op=index" class="btn" target="_blank"><span>关于入驻</span>&gt;</a></dd></dl></li></ul></div></div>
+
+                <div id="footer">
+
+                    <div class="wrapper">
+
+                        <div class="screen clearfix">
+
+                            <div class="fl right-flag">
+
+                            <a href="javascript:if(confirm(%27http://webscan.360.cn/index/checkwebsite/url/meipin365.cn  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://webscan.360.cn/index/checkwebsite/url/meipin365.cn%27" tppabs="http://webscan.360.cn/index/checkwebsite/url/meipin365.cn"><img border="0" src="../../img.webscan.360.cn/status/pai/hash/733f87ec5026411d0fc492a133d91225.png" tppabs="http://img.webscan.360.cn/status/pai/hash/733f87ec5026411d0fc492a133d91225" style="width:93px; height:34px;"></a>
+
+                            </div>
+
+
+
+                            <div class="fl about-us"><p><a href="javascript:if(confirm(%27http://meipin365.cn/mall/  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/%27" tppabs="http://meipin365.cn/mall">返回首页</a><span>|</span> <a  href="http://meipin365.cn/member/index.php?act=article&amp;op=show&amp;article_id=22">关于美品</a><span>|</span> <a  href="javascript:if(confirm(%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=7  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Ultra\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/member/index.php?act=article&op=article&ac_id=7%27" tppabs="http://meipin365.cn/member/index.php?act=article&op=article&ac_id=7">合作品牌</a><span>|</span> <a  href="http://meipin365.cn/member/index.php?act=article&amp;op=show&amp;article_id=47">商家入驻</a><span>|</span> <a  href="">营销中心</a><span>|</span><a href="javascript:if(confirm(%27http://meipin365.cn/mall/index.php?act=link&op=index  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27http://meipin365.cn/mall/index.php?act=link&op=index%27" tppabs="http://meipin365.cn/mall/index.php?act=link&op=index">友情链接</a><span>|</span>客服电话：<a class="red">400-612-3315</a></p>
+
+                                <p>CopyRight © 2007-2016 美品商城交流中心 <a href="javascript:if(confirm(%27http://www.miibeian.gov.cn/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.miibeian.gov.cn/%27" tppabs="http://www.miibeian.gov.cn/" target="_blank" mxf="sqde" style="color:#666">豫ICP备16001583</a> 河南汇众益丰电子商务有限公司 版权所有 </p>
+
+                                <p><a >增值电信业务经营许可证 豫B2-20160095<a><a href="javascript:if(confirm(%27http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41010802000001  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41010802000001%27" tppabs="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41010802000001"><img src="../data/resource/img/gaba.png" tppabs="http://meipin365.cn/data/resource/img/gaba.png"/> 豫公网安备 41010802000001号</a>&nbsp;
+                                            <a >食品经营许可证 JY14101080000498<a></p>
+
+                                <p></p>
+
+
+
+                            </div>
+
+                            <a href="javascript:if(confirm(%27http://218.28.13.36:8999/TopICRS/certificateAction.do?id=201604280000001194  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://218.28.13.36:8999/TopICRS/certificateAction.do?id=201604280000001194%27" tppabs="http://218.28.13.36:8999/TopICRS/certificateAction.do?id=201604280000001194" target="_blank" ><img src="../data/resource/img/zzgs_icon.jpg" tppabs="http://meipin365.cn/data/resource/img/zzgs_icon.jpg" style="height:40px; width:auto; margin-left: 10px;" /><a>
+
+                        </div>
+
+
+
+
+
+</div><script type="text/javascript" src="../data/resource/js/jquery.cookie.js" tppabs="http://meipin365.cn/data/resource/js/jquery.cookie.js"></script><link href="../data/resource/js/perfect-scrollbar.min.css" tppabs="http://meipin365.cn/data/resource/js/perfect-scrollbar.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="../data/resource/js/perfect-scrollbar.min.js" tppabs="http://meipin365.cn/data/resource/js/perfect-scrollbar.min.js"></script> <script type="text/javascript" src="../data/resource/js/qtip/jquery.qtip.min.js" tppabs="http://meipin365.cn/data/resource/js/qtip/jquery.qtip.min.js"></script><link href="../data/resource/js/qtip/jquery.qtip.min.css" tppabs="http://meipin365.cn/data/resource/js/qtip/jquery.qtip.min.css" rel="stylesheet" type="text/css"><!-- 对比 --> <script src="resource/js/compare.js" tppabs="http://meipin365.cn/mall/resource/js/compare.js"></script> <script type="text/javascript">
+
+    $(function () {
+
+// Membership card
+
+        $('[nctype="mcard"]').membershipCard({type: 'shop'});
+
+    });
+
+        </script>
+		
+		<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "../../hm.baidu.com/hm.js-867a2cfd2a04b77f044fb1fa9848e5f3.js"/*tpa=http://hm.baidu.com/hm.js?867a2cfd2a04b77f044fb1fa9848e5f3*/;
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
